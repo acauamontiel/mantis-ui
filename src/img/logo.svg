@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1 (8751) - http://www.bohemiancoding.com/sketch -->
+    <title>mantis-ui</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4FC17F" offset="0%"></stop>
+            <stop stop-color="#1F9F55" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.175 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="mantis-ui" sketch:type="MSArtboardGroup">
+            <rect id="bg" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup" x="0" y="0" width="300" height="300" rx="40"></rect>
+            <path d="M60,51 L60,213.000182 C60,232.882333 76.112372,249 95.9930697,249 L204.00693,249 C223.885354,249 240,232.88078 240,213.000182 L240,51 L60,51 L60,51 Z M96,51 L96,195.005221 C96,204.943463 104.05134,213 114.000779,213 L185.999221,213 C195.940777,213 204,204.938703 204,195.005221 L204,51 L96,51 L96,51 Z M204,87 L204,123 L240,123 L240,87 L204,87 L204,87 Z" id="UI" fill="#BDF2D2" filter="url(#filter-2)" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

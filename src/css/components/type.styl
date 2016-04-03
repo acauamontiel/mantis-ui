@@ -1,0 +1,66 @@
+/*
+ * Generate font-faces from $font-faces
+ */
+
+for font in $font-faces
+	font-face(font.name, font.file, font.weight)
+
+
+/*
+ * Text Styles
+ */
+
+html
+	font-size $font-scale
+
+body
+	font-family $body-font-family
+	font-size $body-font-size
+	line-height $body-line-height
+
+.h1
+h1
+	margin-bottom $headings-margin-bottom
+	font-family $headings-font-family
+	font-size $h1-font-size
+	font-weight $headings-font-weight
+	color $headings-color
+
+.h2
+h2
+	@extends .h1
+	font-size $h2-font-size
+
+.h3
+h3
+	@extends .h1
+	font-size $h3-font-size
+
+.h4
+h4
+	@extends .h1
+	font-size $h4-font-size
+.h5
+h5
+	@extends .h1
+	font-size $h5-font-size
+
+.h6
+h6
+	@extends .h1
+	font-size $h6-font-size
+
+.a
+a
+	color $a-color
+	transition $a-transition
+
+	&:hover
+		color $a-color-hover
+		text-decoration underline
+
+.p
+p
+	margin-bottom $p-margin-bottom
+	font-size $p-font-size
+	color $p-color

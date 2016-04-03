@@ -1,0 +1,190 @@
+/*
+ * Globals
+ */
+
+$mantis ?= {}
+$mantis.ui = {
+	enable: {
+		transitions: true,
+		gutters: true,
+		rounded: false,
+		radius: false,
+		gradients: false,
+		shadows: true
+	}
+}
+
+
+/*
+ * Colors
+ *
+ * Colors from Flat UI Colors:
+ * https://flatuicolors.com/
+ *
+ * Use the following website to help you name other colors:
+ * http://chir.ag/projects/name-that-color
+ */
+
+$color = {
+	black: #000000,
+	white: #ffffff,
+	turquoise: #1abc9c,
+	green-sea: #16a085,
+	emerald: #2ecc71,
+	nephritis: #27ae60,
+	peter-river: #3498db,
+	belize-hole: #2980b9,
+	amethyst: #9b59b6,
+	wisteria: #8e44ad,
+	wet-asphalt: #34495e,
+	midnight-blue: #2c3e50,
+	sun-flower: #f1c40f,
+	orange: #f39c12,
+	carrot: #e67e22,
+	pumpkin: #d35400,
+	alizarin: #e74c3c,
+	pomegranate: #c0392b,
+	clouds: #ecf0f1,
+	silver: #bdc3c7,
+	concrete: #95a5a6,
+	asbestos: #7f8c8d
+}
+
+
+/*
+ * Typography
+ */
+
+// Font Families
+$font-family-sans-serif = Arial, Helvetica, sans-serif
+$font-family-marvel = 'Marvel', sans-serif
+
+$font-family-default = $font-family-sans-serif
+$font-family-brand = $font-family-marvel
+
+// Font Sizes
+$font-size-xlargest = rem(40)
+$font-size-largest = rem(32)
+$font-size-xxlarge = rem(28)
+$font-size-xlarge = rem(24)
+$font-size-large = rem(20)
+$font-size-base = rem(16)
+$font-size-small = rem(13)
+$font-size-xsmall = rem(11)
+
+// Font Weights
+$font-weight-sans-serif-regular = normal
+$font-weight-sans-serif-bold = bold
+$font-weight-marvel-regular = 400
+$font-weight-marvel-bold = 700
+
+$font-weight-default-regular = $font-weight-sans-serif-regular
+$font-weight-default-bold = $font-weight-sans-serif-bold
+$font-weight-brand-regular = $font-weight-marvel-regular
+$font-weight-brand-bold = $font-weight-marvel-bold
+
+// Font Faces
+$font-faces = {
+	name: 'Marvel',
+	file: 'Marvel-Regular',
+	weight: $font-weight-brand-regular
+}, {
+	name: 'Marvel',
+	file: 'Marvel-Bold',
+	weight: $font-weight-brand-bold
+}
+
+// Font Scale
+$font-scale = 100%
+
+// Line Heights
+$line-height-base = 1.5
+
+
+/*
+ * Transition
+ */
+
+$transition = .5s
+$transition-fast = $transition / 2
+$transition-slow = $transition * 2
+
+
+/*
+ * Breakpoints
+ *
+ * See how to use Mantis Querist:
+ * https://github.com/mantis-stack/mantis-querist
+ */
+
+querist-init()
+
+
+/*
+ * Grid
+ *
+ * See how to use Mantis Grid System:
+ * https://github.com/mantis-stack/mantis-grid
+ */
+
+$mantis.grid.breakpoints = {
+	prefix: 'sm',
+	gutter: $mantis.ui.enable.gutters && 10px
+}, {
+	prefix: 'md',
+	gutter: $mantis.ui.enable.gutters && 10px,
+	media-querie: $from.md
+}, {
+	prefix: 'lg',
+	gutter: $mantis.ui.enable.gutters && 10px,
+	media-querie: $from.lg
+}
+grid-init()
+
+
+/*
+ * Body
+ */
+
+$body-font-family = $font-family-default
+$body-font-size = $font-size-base
+$body-line-height = $line-height-base
+$body-color = $color.midnight-blue
+$body-bg = $color.clouds
+$body-selection-color = $color.clouds
+$body-selection-bg = $color.midnight-blue
+
+
+/*
+ * Headings
+ */
+
+$headings-margin-bottom = 8px
+$headings-font-family = $font-family-brand
+$headings-font-weight = $font-weight-brand-bold
+$headings-color = inherit
+
+$h1-font-size = $font-size-xlargest
+$h2-font-size = $font-size-largest
+$h3-font-size = $font-size-xxlarge
+$h4-font-size = $font-size-xlarge
+$h5-font-size = $font-size-large
+$h6-font-size = $font-size-base
+
+
+/*
+ * Links
+ */
+
+$a-color = $color.belize-hole
+$a-color-hover = $color.belize-hole
+$a-transition = $transition-fast
+
+
+/*
+ * Paragraphs
+ */
+
+$p-margin-bottom = 12px
+$p-font-size = $font-size-base
+$p-color = inherit
