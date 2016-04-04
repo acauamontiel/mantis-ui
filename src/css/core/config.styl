@@ -28,24 +28,34 @@ $mantis.ui = {
 $color = {
 	black: #000000,
 	white: #ffffff,
+
 	turquoise: #1abc9c,
 	green-sea: #16a085,
+
 	emerald: #2ecc71,
 	nephritis: #27ae60,
+
 	peter-river: #3498db,
 	belize-hole: #2980b9,
+
 	amethyst: #9b59b6,
 	wisteria: #8e44ad,
+
 	wet-asphalt: #34495e,
 	midnight-blue: #2c3e50,
+
 	sun-flower: #f1c40f,
 	orange: #f39c12,
+
 	carrot: #e67e22,
 	pumpkin: #d35400,
+
 	alizarin: #e74c3c,
 	pomegranate: #c0392b,
+
 	clouds: #ecf0f1,
 	silver: #bdc3c7,
+
 	concrete: #95a5a6,
 	asbestos: #7f8c8d
 }
@@ -57,6 +67,7 @@ $color = {
 
 // Font Families
 $font-family-sans-serif = Arial, Helvetica, sans-serif
+$font-family-monospace = Consolas, Courier, monospace
 $font-family-marvel = 'Marvel', sans-serif
 
 $font-family-default = $font-family-sans-serif
@@ -156,9 +167,10 @@ $body-selection-bg = $color.midnight-blue
 
 
 /*
- * Headings
+ * Text Elements
  */
 
+// Headings
 $headings-margin-bottom = 8px
 $headings-font-family = $font-family-brand
 $headings-font-weight = $font-weight-brand-bold
@@ -171,20 +183,23 @@ $h4-font-size = $font-size-xlarge
 $h5-font-size = $font-size-large
 $h6-font-size = $font-size-base
 
-
-/*
- * Links
- */
-
-$a-color = $color.belize-hole
+// Links
+$a-color = $color.peter-river
 $a-color-hover = $color.belize-hole
 $a-transition = $transition-fast
 
-
-/*
- * Paragraphs
- */
-
+// Paragraphs
 $p-margin-bottom = 12px
 $p-font-size = $font-size-base
 $p-color = inherit
+
+// Inline elements
+$small-font-size = 75%
+
+$em-font-style = italic
+
+$mark-padding = 3px
+$mark-bg = rgba($color.sun-flower, .5)
+
+$abbr-border-bottom = 1px dotted $body-color
+$abbr-cursor = help
