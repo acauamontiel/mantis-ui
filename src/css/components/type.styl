@@ -7,7 +7,7 @@ for font in $font-faces
 
 
 /*
- * Text Styles
+ * General Text Styles
  */
 
 +selection()
@@ -22,8 +22,11 @@ body
 	font-size $body-font-size
 	line-height $body-line-height
 
+/*
+ * "Classful" Text Styles
+ */
+
 .h1
-h1
 	margin $headings-margin
 	font-family $headings-font-family
 	font-size $h1-font-size
@@ -31,37 +34,30 @@ h1
 	color $headings-color
 
 .h2
-h2
 	@extends .h1
 	font-size $h2-font-size
 
 .h3
-h3
 	@extends .h1
 	font-size $h3-font-size
 
 .h4
-h4
 	@extends .h1
 	font-size $h4-font-size
 .h5
-h5
 	@extends .h1
 	font-size $h5-font-size
 
 .h6
-h6
 	@extends .h1
 	font-size $h6-font-size
 
 .p
-p
 	margin $p-margin
 	font-size $p-font-size
 	color $p-color
 
 .a
-a
 	color $a-color
 	transition $a-transition
 
@@ -70,31 +66,25 @@ a
 		text-decoration underline
 
 .small
-small
 	font-size $small-font-size
 
 .em
-em
 	font-style $em-font-style
 
 .mark
-mark
 	padding $mark-padding
 	background $mark-background
 
 .abbr
-abbr
 	border-bottom $abbr-border-bottom
 
 	&[title]
 		cursor $abbr-cursor
 
 .samp
-samp
 	font-family $font-family-monospace
 
 .code
-code
 	padding $code-padding
 	font-family $code-font-family
 	color $code-color
@@ -106,7 +96,6 @@ code
 		background $code-selection-background
 
 .pre
-pre
 	@extends .p
 	overflow $pre-overflow
 	padding $pre-padding
@@ -120,7 +109,6 @@ pre
 		background $pre-selection-background
 
 .kbd
-kbd
 	padding $kbd-padding
 	font-family $kbd-font-family
 	color $kbd-color
@@ -132,7 +120,6 @@ kbd
 		background $kbd-selection-background
 
 .blockquote
-blockquote
 	@extends .p
 	padding $blockquote-padding
 	font-family $blockquote-font-family
@@ -142,7 +129,7 @@ blockquote
 	border-color $blockquote-border-color
 
 	if $blockquote-quotation-marks
-		p
+		&__quote
 			font-style $blockquote-font-style
 
 			&:before
@@ -156,3 +143,63 @@ blockquote
 
 		&:before
 			content '\2014 \00A0'
+
+	&__cite
+		font-style $blockquote-cite-font-style
+
+
+/*
+ * "Classless" Text Styles
+ */
+
+.ui
+	h1
+		@extends .h1
+
+	h2
+		@extends .h2
+
+	h3
+		@extends .h3
+
+	h4
+		@extends .h4
+
+	h5
+		@extends .h5
+
+	h6
+		@extends .h6
+
+	p
+		@extends .p
+
+	a
+		@extends .a
+
+	small
+		@extends .small
+
+	em
+		@extends .em
+
+	mark
+		@extends .mark
+
+	abbr
+		@extends .abbr
+
+	samp
+		@extends .samp
+
+	code
+		@extends .code
+
+	pre
+		@extends .pre
+
+	kbd
+		@extends .kbd
+
+	blockquote
+		@extends .blockquote
