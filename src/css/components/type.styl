@@ -12,7 +12,7 @@ for font in $font-faces
 
 +selection()
 	color $selection-color
-	background $selection-bg
+	background $selection-background
 
 html
 	font-size $font-scale
@@ -24,7 +24,7 @@ body
 
 .h1
 h1
-	margin-bottom $headings-margin-bottom
+	margin $headings-margin
 	font-family $headings-font-family
 	font-size $h1-font-size
 	font-weight $headings-font-weight
@@ -56,7 +56,7 @@ h6
 
 .p
 p
-	margin 0 0 $p-margin-bottom
+	margin $p-margin
 	font-size $p-font-size
 	color $p-color
 
@@ -80,7 +80,7 @@ em
 .mark
 mark
 	padding $mark-padding
-	background $mark-bg
+	background $mark-background
 
 .abbr
 abbr
@@ -98,12 +98,12 @@ code
 	padding $code-padding
 	font-family $code-font-family
 	color $code-color
-	background $code-bg
+	background $code-background
 	border-radius $code-border-radius
 
 	+selection()
 		color $code-selection-color
-		background $code-selection-bg
+		background $code-selection-background
 
 .pre
 pre
@@ -112,24 +112,24 @@ pre
 	padding $pre-padding
 	font-family $pre-font-family
 	color $pre-color
-	background $pre-bg
+	background $pre-background
 	border-radius $pre-border-radius
 
 	+selection()
 		color $pre-selection-color
-		background $pre-selection-bg
+		background $pre-selection-background
 
 .kbd
 kbd
 	padding $kbd-padding
 	font-family $kbd-font-family
 	color $kbd-color
-	background $kbd-bg
+	background $kbd-background
 	border-radius $kbd-border-radius
 
 	+selection()
 		color $kbd-selection-color
-		background $kbd-selection-bg
+		background $kbd-selection-background
 
 .blockquote
 blockquote
