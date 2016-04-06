@@ -10,6 +10,10 @@ for font in $font-faces
  * Text Styles
  */
 
++selection()
+	color $selection-color
+	background $selection-bg
+
 html
 	font-size $font-scale
 
@@ -50,6 +54,12 @@ h6
 	@extends .h1
 	font-size $h6-font-size
 
+.p
+p
+	margin 0 0 $p-margin-bottom
+	font-size $p-font-size
+	color $p-color
+
 .a
 a
 	color $a-color
@@ -58,12 +68,6 @@ a
 	&:hover
 		color $a-color-hover
 		text-decoration underline
-
-.p
-p
-	margin-bottom $p-margin-bottom
-	font-size $p-font-size
-	color $p-color
 
 .small
 small
@@ -84,3 +88,45 @@ abbr
 
 	&[title]
 		cursor $abbr-cursor
+
+.samp
+samp
+	font-family $font-family-monospace
+
+.code
+code
+	padding $code-padding
+	font-family $code-font-family
+	color $code-color
+	background $code-bg
+	border-radius $code-border-radius
+
+	+selection()
+		color $code-selection-color
+		background $code-selection-bg
+
+.pre
+pre
+	@extends .p
+	overflow $pre-overflow
+	padding $pre-padding
+	font-family $pre-font-family
+	color $pre-color
+	background $pre-bg
+	border-radius $pre-border-radius
+
+	+selection()
+		color $pre-selection-color
+		background $pre-selection-bg
+
+.kbd
+kbd
+	padding $kbd-padding
+	font-family $kbd-font-family
+	color $kbd-color
+	background $kbd-bg
+	border-radius $kbd-border-radius
+
+	+selection()
+		color $kbd-selection-color
+		background $kbd-selection-bg

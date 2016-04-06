@@ -8,7 +8,7 @@ $mantis.ui = {
 		transitions: true,
 		gutters: true,
 		rounded: false,
-		radius: false,
+		radius: true,
 		gradients: false,
 		shadows: true
 	}
@@ -66,12 +66,15 @@ $color = {
  */
 
 // Font Families
+$font-family-serif = Georgia, serif
 $font-family-sans-serif = Arial, Helvetica, sans-serif
 $font-family-monospace = Consolas, Courier, monospace
 $font-family-marvel = 'Marvel', sans-serif
 
 $font-family-default = $font-family-sans-serif
 $font-family-brand = $font-family-marvel
+$font-family-reference = $font-family-serif
+$font-family-code = $font-family-monospace
 
 // Font Sizes
 $font-size-xlargest = rem(40)
@@ -162,13 +165,15 @@ $body-font-size = $font-size-base
 $body-line-height = $line-height-base
 $body-color = $color.midnight-blue
 $body-bg = $color.clouds
-$body-selection-color = $color.clouds
-$body-selection-bg = $color.midnight-blue
 
 
 /*
  * Text Elements
  */
+
+// Selections
+$selection-color = $color.clouds
+$selection-bg = $color.midnight-blue
 
 // Headings
 $headings-margin-bottom = 8px
@@ -183,17 +188,17 @@ $h4-font-size = $font-size-xlarge
 $h5-font-size = $font-size-large
 $h6-font-size = $font-size-base
 
-// Links
-$a-color = $color.peter-river
-$a-color-hover = $color.belize-hole
-$a-transition = $transition-fast
-
 // Paragraphs
 $p-margin-bottom = 12px
 $p-font-size = $font-size-base
 $p-color = inherit
 
-// Inline elements
+// Links
+$a-color = $color.peter-river
+$a-color-hover = $color.belize-hole
+$a-transition = $transition-fast
+
+// Other Text Elements
 $small-font-size = 75%
 
 $em-font-style = italic
@@ -203,3 +208,30 @@ $mark-bg = rgba($color.sun-flower, .5)
 
 $abbr-border-bottom = 1px dotted $body-color
 $abbr-cursor = help
+
+$samp-font-family = $font-family-code
+
+$code-padding = 3px
+$code-font-family = $samp-font-family
+$code-color = $color.clouds
+$code-bg = $color.midnight-blue
+$code-border-radius = 3px
+$code-selection-color = $color.midnight-blue
+$code-selection-bg = $color.clouds
+
+$pre-overflow = auto
+$pre-padding = 5px 10px
+$pre-font-family = $code-font-family
+$pre-color = $code-color
+$pre-bg = $code-bg
+$pre-border-radius = $code-border-radius
+$pre-selection-color = $code-selection-color
+$pre-selection-bg = $code-selection-bg
+
+$kbd-padding = $code-padding
+$kbd-font-family = $code-font-family
+$kbd-color = $code-color
+$kbd-bg = $color.asbestos
+$kbd-border-radius = $code-border-radius
+$kbd-selection-color = $code-selection-color
+$kbd-selection-bg = $code-selection-bg
