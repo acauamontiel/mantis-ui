@@ -130,3 +130,29 @@ kbd
 	+selection()
 		color $kbd-selection-color
 		background $kbd-selection-bg
+
+.blockquote
+blockquote
+	@extends .p
+	padding $blockquote-padding
+	font-family $blockquote-font-family
+	font-size $blockquote-font-size
+	border-style $blockquote-border-style
+	border-width $blockquote-border-width
+	border-color $blockquote-border-color
+
+	if $blockquote-quotation-marks
+		p
+			font-style $blockquote-font-style
+
+			&:before
+				content '“'
+
+			&:after
+				content '”'
+
+	&__footer
+		color $blockquote-footer-color
+
+		&:before
+			content '\2014 \00A0'
