@@ -111,7 +111,7 @@ placeholder()
 
 
 /*
- * Placeholder Mixin
+ * Selection Mixin
  */
 
 selection()
@@ -129,10 +129,10 @@ selection()
 _transition = transition
 transition(args...)
 	if args
-		_transition args if $mantis.ui.enable.transitions
+		_transition args if $mantis.ui.transitions.enable
 
 // border-radius
 _border-radius = border-radius
 border-radius(args...)
 	if args
-		_border-radius args if $mantis.ui.enable.radius
+		_border-radius args if $mantis.ui.radius.enable

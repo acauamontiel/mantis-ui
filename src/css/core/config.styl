@@ -4,13 +4,23 @@
 
 $mantis ?= {}
 $mantis.ui = {
-	enable: {
-		transitions: true,
-		gutters: true,
-		rounded: false,
-		radius: true,
-		gradients: false,
-		shadows: true
+	gradients: {
+		enable: false
+	},
+	gutters: {
+		enable: true,
+		default: 10px
+	},
+	radius: {
+		enable: true,
+		default: 3px
+	},
+	shadows: {
+		enable: false
+	},
+	transitions: {
+		enable: true,
+		default: .5s
 	}
 }
 
@@ -119,7 +129,7 @@ $line-height-base = 1.5
  * Transition
  */
 
-$transition = .5s
+$transition = $mantis.ui.transitions.default
 $transition-fast = $transition / 2
 $transition-slow = $transition * 2
 
@@ -143,14 +153,14 @@ querist-init()
 
 $mantis.grid.breakpoints = {
 	prefix: 'sm',
-	gutter: $mantis.ui.enable.gutters && 10px
+	gutter: $mantis.ui.gutters.enable && $mantis.ui.gutters.default
 }, {
 	prefix: 'md',
-	gutter: $mantis.ui.enable.gutters && 10px,
+	gutter: $mantis.ui.gutters.enable && $mantis.ui.gutters.default,
 	media-querie: $from.md
 }, {
 	prefix: 'lg',
-	gutter: $mantis.ui.enable.gutters && 10px,
+	gutter: $mantis.ui.gutters.enable && $mantis.ui.gutters.default,
 	media-querie: $from.lg
 }
 grid-init()
@@ -215,7 +225,7 @@ $code-padding = 3px
 $code-font-family = $samp-font-family
 $code-color = $color.clouds
 $code-background = $color.midnight-blue
-$code-border-radius = 3px
+$code-border-radius = $mantis.ui.radius.default
 $code-selection-color = $color.midnight-blue
 $code-selection-background = $color.clouds
 
@@ -224,7 +234,7 @@ $pre-padding = 5px 10px
 $pre-font-family = $code-font-family
 $pre-color = $code-color
 $pre-background = $code-background
-$pre-border-radius = $code-border-radius
+$pre-border-radius = $mantis.ui.radius.default
 $pre-selection-color = $code-selection-color
 $pre-selection-background = $code-selection-background
 
@@ -232,7 +242,7 @@ $kbd-padding = $code-padding
 $kbd-font-family = $code-font-family
 $kbd-color = $code-color
 $kbd-background = $color.asbestos
-$kbd-border-radius = $code-border-radius
+$kbd-border-radius = $mantis.ui.radius.default
 $kbd-selection-color = $code-selection-color
 $kbd-selection-background = $code-selection-background
 
@@ -246,3 +256,8 @@ $blockquote-border-width = 0 0 0 5px
 $blockquote-border-color = $color.silver
 $blockquote-footer-color = $color.asbestos
 $blockquote-cite-font-style = italic
+
+$hr-margin = 20px 0
+$hr-border-style = solid
+$hr-border-width = 0 0 1px
+$hr-border-color = $color.silver
