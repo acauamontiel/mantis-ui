@@ -1,0 +1,56 @@
+/*
+ * "Classful" List Styles
+ */
+
+$list-elements = ()
+
+.ul
+	@extends .p
+	padding $ul-padding
+	list-style-type $ul-list-style-type
+
+	append($list-elements, selector())
+
+	.ul
+	ul
+		margin $ul-ul-margin
+		list-style-type $ul-ul-list-style-type
+
+		.ul
+		ul
+			list-style-type $ul-ul-ul-list-style-type
+
+.ol
+	@extends .p
+	padding $ol-padding
+	list-style-type $ol-list-style-type
+
+	append($list-elements, selector())
+
+	.ol
+	ol
+		margin $ol-ol-margin
+
+.dt
+	margin $dt-margin
+	font-weight $dt-font-weight
+
+	append($list-elements, selector())
+
+.dl
+	@extends .p
+
+	append($list-elements, selector())
+
+	dt
+		@extends .dt
+
+
+/*
+ * "Classless" List Styles
+ */
+
+.ui
+	for i in $list-elements
+		{slice(i, 1)}
+			@extends {i}
