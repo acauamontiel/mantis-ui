@@ -76,14 +76,16 @@ $text-elements = ()
 	append($text-elements, selector())
 
 .a
-	color $a-color
-	transition $a-transition
+	&:not(.bt)
+		color $a-color
+		transition $a-transition
 
 	append($text-elements, selector())
 
 	&:hover
-		color $a-color-hover
-		text-decoration underline
+		&:not(.bt)
+			color $a-color-hover
+			text-decoration underline
 
 .small
 	font-size $small-font-size

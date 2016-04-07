@@ -258,8 +258,8 @@ $blockquote-footer-color = $color.asbestos
 $blockquote-cite-font-style = italic
 
 $hr-margin = 20px 0
-$hr-border-style = solid
 $hr-border-width = 0 0 1px
+$hr-border-style = solid
 $hr-border-color = $color.silver
 
 
@@ -282,3 +282,84 @@ $ol-ol-margin = $ul-ul-margin
 // Definition Lists
 $dt-margin = 0 0 3px
 $dt-font-weight = bold
+
+
+/*
+ * Buttons
+ */
+
+$bt-padding = 5px 18px
+$bt-border-width = 2px
+$bt-border-style = solid
+$bt-border-radius = $mantis.ui.radius.default
+$bt-transition = $transition-fast
+
+// Default Theme
+$bt = {
+	colors: {
+		default: {
+			normal: $color.concrete,
+			highlight: $color.asbestos
+		},
+		alert: {
+			normal: $color.alizarin,
+			highlight: $color.pomegranate
+		},
+		warning: {
+			normal: $color.carrot,
+			highlight: $color.pumpkin
+		},
+		info: {
+			normal: $color.peter-river,
+			highlight: $color.belize-hole
+		},
+		success: {
+			normal: $color.emerald,
+			highlight: $color.nephritis
+		}
+	},
+	themes: {
+		default: {
+			default: {
+				color: $color.white,
+				background: $color.concrete,
+				border-color: transparent
+			},
+			hover: {
+				background: $color.asbestos
+			}
+		},
+		alert: {
+			default: {
+				background: $color.alizarin
+			},
+			hover: {
+				background: $color.pomegranate
+			}
+		},
+		warning: {
+			default: {
+				background: $color.carrot
+			},
+			hover: {
+				background: $color.pumpkin
+			}
+		},
+		info: {
+			default: {
+				background: $color.peter-river
+			},
+			hover: {
+				background: $color.belize-hole
+			}
+		},
+		success: {
+			default: {
+				background: $color.emerald
+			},
+			hover: {
+				background: $color.nephritis
+			}
+		}
+	}
+}

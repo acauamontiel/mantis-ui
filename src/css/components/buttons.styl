@@ -1,0 +1,38 @@
+/*
+ * Buttons
+ */
+
+// Define theme
+button-theme($name)
+	for $prop, $val in $bt.themes[$name].default
+		{$prop} $val
+
+	&:hover
+		for $prop, $val in $bt.themes[$name].hover
+			{$prop} $val
+
+.bt
+	display inline-block
+	padding $bt-padding
+	text-align center
+	line-height inherit
+	white-space nowrap
+	vertical-align middle
+	border-width $bt-border-width
+	border-style $bt-border-style
+	border-radius $bt-border-radius
+	transition $bt-transition
+	cursor pointer
+	button-theme 'default'
+
+	&--alert
+		button-theme 'alert'
+
+	&--warning
+		button-theme 'warning'
+
+	&--info
+		button-theme 'info'
+
+	&--success
+		button-theme 'success'
