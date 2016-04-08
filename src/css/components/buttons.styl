@@ -2,14 +2,18 @@
  * Buttons
  */
 
+// Define state
+button-set-state($theme, $style, $state)
+	for $prop, $val in $bt.styles[$style][$state]
+		$v = ($val is 'normal' || $val is 'highlight') ? $themes[$theme][$val] : $val
+		{$prop} $v
+
 // Define theme
-button-theme($name)
-	for $prop, $val in $bt.themes[$name].default
-		{$prop} $val
+button-theme($theme, $style)
+	button-set-state($theme, $style, 'default')
 
 	&:hover
-		for $prop, $val in $bt.themes[$name].hover
-			{$prop} $val
+		button-set-state($theme, $style, 'hover')
 
 .bt
 	display inline-block
@@ -23,16 +27,24 @@ button-theme($name)
 	border-radius $bt-border-radius
 	transition $bt-transition
 	cursor pointer
-	button-theme 'default'
+	button-theme 'default' 'default'
 
-	&--alert
-		button-theme 'alert'
+	// Sizes
+	for $size in $bt.sizes
+		&--{$size}
+			for $prop, $val in $bt.sizes[$size]
+				{$prop} $val
 
-	&--warning
-		button-theme 'warning'
+	// Styles
+	for $style in $bt.styles
+		&--{$style}
+			button-theme 'default' $style
 
-	&--info
-		button-theme 'info'
+	// Themes
+	for $theme in $themes
+		&--{$theme}
+			button-theme $theme 'default'
 
-	&--success
-		button-theme 'success'
+			for $style in $bt.styles
+				&.bt--{$style}
+					button-theme $theme $style
