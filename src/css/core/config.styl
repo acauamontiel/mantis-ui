@@ -70,6 +70,37 @@ $color = {
 	asbestos: #7f8c8d
 }
 
+$themes = {
+	default: {
+		normal: $color.concrete,
+		highlight: $color.asbestos
+	},
+	alert: {
+		normal: $color.alizarin,
+		highlight: $color.pomegranate
+	},
+	warning: {
+		normal: $color.carrot,
+		highlight: $color.pumpkin
+	},
+	info: {
+		normal: $color.peter-river,
+		highlight: $color.belize-hole
+	},
+	success: {
+		normal: $color.emerald,
+		highlight: $color.nephritis
+	}
+	primary: {
+		normal: $color.wet-asphalt,
+		highlight: $color.midnight-blue
+	},
+	secondary: {
+		normal: $color.amethyst,
+		highlight: $color.wisteria
+	}
+}
+
 
 /*
  * Typography
@@ -294,71 +325,67 @@ $bt-border-style = solid
 $bt-border-radius = $mantis.ui.radius.default
 $bt-transition = $transition-fast
 
+// Sizes
+$bt-small-padding = 0 10px
+$bt-small-font-size = $font-size-small
+
+$bt-large-padding = 8px 25px
+$bt-large-font-size = $font-size-large
+
+$bt-giant-padding = 12px 35px
+$bt-giant-font-size = $font-size-xxlarge
+
 // Default Theme
 $bt = {
-	colors: {
+	sizes: {
+		small: {
+			padding: 0 10px,
+			font-size: $font-size-small
+		},
 		default: {
-			normal: $color.concrete,
-			highlight: $color.asbestos
+			padding: 5px 18px,
+			font-size: $font-size-base
 		},
-		alert: {
-			normal: $color.alizarin,
-			highlight: $color.pomegranate
+		large: {
+			padding: 8px 25px,
+			font-size: $font-size-large
 		},
-		warning: {
-			normal: $color.carrot,
-			highlight: $color.pumpkin
-		},
-		info: {
-			normal: $color.peter-river,
-			highlight: $color.belize-hole
-		},
-		success: {
-			normal: $color.emerald,
-			highlight: $color.nephritis
+		giant: {
+			padding: 12px 35px,
+			font-size: $font-size-xxlarge
 		}
 	},
-	themes: {
+	styles: {
 		default: {
 			default: {
 				color: $color.white,
-				background: $color.concrete,
+				background: 'normal'
 				border-color: transparent
 			},
 			hover: {
-				background: $color.asbestos
+				background: 'highlight'
 			}
 		},
-		alert: {
+		quiet: {
 			default: {
-				background: $color.alizarin
+				color: 'normal',
+				background: transparent
 			},
 			hover: {
-				background: $color.pomegranate
+				color: 'highlight',
+				background: rgba($color.silver, .25)
 			}
 		},
-		warning: {
+		fussy: {
 			default: {
-				background: $color.carrot
+				color: 'normal',
+				background: transparent,
+				border-color: 'normal'
 			},
 			hover: {
-				background: $color.pumpkin
-			}
-		},
-		info: {
-			default: {
-				background: $color.peter-river
-			},
-			hover: {
-				background: $color.belize-hole
-			}
-		},
-		success: {
-			default: {
-				background: $color.emerald
-			},
-			hover: {
-				background: $color.nephritis
+				color: 'highlight',
+				background: transparent,
+				border-color: 'highlight'
 			}
 		}
 	}
