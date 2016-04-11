@@ -5,8 +5,16 @@
 // Define state
 button-set-state($theme, $style, $state)
 	for $prop, $val in $bt.styles[$style][$state]
-		$v = ($val is 'normal' || $val is 'highlight') ? $themes[$theme][$val] : $val
-		{$prop} $v
+		if length($val) is 3
+			$c = $themes[$theme][$val[0]]
+			$f = $val[1]
+			$p = $val[2]
+			{$prop} $f($c, $p)
+		else if typeof($val) is 'string'
+			$c = $themes[$theme][$val]
+			{$prop} $c
+		else
+			{$prop} $val
 
 // Define theme
 button-theme($theme, $style)
