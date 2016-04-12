@@ -38,6 +38,11 @@ button-theme($theme, $style)
 	cursor pointer
 	button-theme 'default' 'default'
 
+	&[disabled]
+		opacity $bt-disabled-opacity
+		cursor not-allowed
+		pointer-events none
+
 	+ .bt--block
 		margin $bt-block-margin
 
