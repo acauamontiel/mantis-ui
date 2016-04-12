@@ -38,11 +38,18 @@ button-theme($theme, $style)
 	cursor pointer
 	button-theme 'default' 'default'
 
+	+ .bt--block
+		margin $bt-block-margin
+
 	// Sizes
 	for $size in $bt.sizes
 		&--{$size}
 			for $prop, $val in $bt.sizes[$size]
 				{$prop} $val
+
+	&--block
+		display block
+		width 100%
 
 	// Styles
 	for $style in $bt.styles
