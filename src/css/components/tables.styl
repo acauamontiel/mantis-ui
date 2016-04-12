@@ -1,0 +1,30 @@
+/*
+ * Tables
+ */
+
+.table
+	@extends .p
+	width 100%
+	max-width 100%
+	border $table-border
+
+	caption
+		@extends .small
+		@extends .em
+		padding $caption-padding
+		color $caption-color
+
+	th
+		@extends .strong
+		padding $th-padding
+		border-bottom $th-border-bottom
+
+	td
+		padding $td-padding
+		border-top $td-border-top
+
+	tbody
+		tr
+			&:first-child
+				td
+					border none
