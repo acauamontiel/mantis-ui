@@ -51,15 +51,17 @@ table-theme($theme)
 		tbody
 			tr
 				&:nth-child(odd)
-					background $table-striped-background
+					td
+						background $table-striped-background
 
 	&--hoverable
 		tbody
 			tr
-				transition $table-hoverable-transition
-
 				&:hover
-					background $table-hoverable-background
+					td
+						background $table-hoverable-background
+			td
+				transition $table-hoverable-transition
 
 	&--framed
 		border $table-framed-border
