@@ -68,9 +68,11 @@ table-theme($theme)
 		border $table-framed-border
 
 	&--scrollable
+		@extends .p
 		overflow-x auto
 
 		table
+			margin 0
 			width auto
 
 		th
