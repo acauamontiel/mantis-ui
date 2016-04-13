@@ -20,6 +20,7 @@ table-theme($theme)
 	@extends .p
 	width 100%
 	max-width 100%
+	min-width 100%
 
 	caption
 		@extends .small
@@ -65,6 +66,15 @@ table-theme($theme)
 
 	&--framed
 		border $table-framed-border
+
+	&--scrollable
+		overflow-x auto
+
+		table
+			width auto
+
+		th
+			white-space nowrap
 
 	// Themes
 	for $theme in $themes
