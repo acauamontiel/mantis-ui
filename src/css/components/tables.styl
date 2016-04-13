@@ -38,3 +38,11 @@
 			tr
 				&:nth-child(odd)
 					background $table-striped-background
+
+	&--hoverable
+		tbody
+			tr
+				transition $table-hoverable-transition
+
+				&:hover
+					background $table-hoverable-background
