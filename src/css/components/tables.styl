@@ -2,6 +2,20 @@
  * Tables
  */
 
+// Define state
+table-theme($theme)
+	for $prop, $val in $table.themes
+		if length($val) is 3
+			$c = $themes[$theme][$val[0]]
+			$f = $val[1]
+			$p = $val[2]
+			{$prop} $f($c, $p)
+		else if typeof($val) is 'string'
+			$c = $themes[$theme][$val]
+			{$prop} $c
+		else
+			{$prop} $val
+
 .table
 	@extends .p
 	width 100%
@@ -32,6 +46,7 @@
 		@extends .em
 		color $tbody-color
 
+	// Styles
 	&--striped
 		tbody
 			tr
@@ -48,3 +63,8 @@
 
 	&--framed
 		border $table-framed-border
+
+	// Themes
+	for $theme in $themes
+		&--{$theme}
+			table-theme $theme
