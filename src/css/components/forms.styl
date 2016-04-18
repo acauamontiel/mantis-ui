@@ -10,7 +10,6 @@
 		display block
 		width 100%
 		padding $form-field-padding
-		font-size inherit
 		line-height inherit
 		color $form-field-color
 		background $form-field-background
@@ -18,4 +17,24 @@
 		border-radius $form-field-border-radius
 
 	&__field-longtext
+	&__combobox
 		@extends .form__field-text
+
+	&__combobox
+		position relative
+		padding 0
+
+		&:after
+			content '▼'
+			position absolute
+			top 50%
+			right 5px
+			font-size 10px
+			transform translateY(-50%)
+			pointer-events none
+
+		&__select
+			display block
+			padding $form-field-padding
+			width 100%
+			line-height inherit
