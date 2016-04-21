@@ -109,3 +109,13 @@
 			background $form-range-track-background
 			transition $form-range-track-transition
 			appearance none
+
+	&__color
+		@extends .form__field-text
+
+		+color-swatch-wrapper()
+			padding 0
+
+		+color-swatch()
+			border none
+			border-radius $form-field-border-radius
