@@ -80,3 +80,33 @@
 
 		&:checked
 			border-width $form-radio-checked-border-width
+
+	&__range
+		width 100%
+		height $form-range-thumb-size
+		appearance none
+
+		&:focus
+			+range-thumb()
+				border-color $form-range-focus-thumb-border-color
+
+			+range-track()
+				background $form-range-focus-track-background
+
+		+range-thumb()
+			position relative
+			top (($form-range-thumb-size / 2) * -1) + ($form-range-track-height / 2)
+			size $form-range-thumb-size
+			background $form-range-thumb-background
+			border $form-range-thumb-border
+			border-radius 50%
+			box-sizing border-box
+			transition $form-range-thumb-transition
+			appearance none
+
+		+range-track()
+			position relative
+			height $form-range-track-height
+			background $form-range-track-background
+			transition $form-range-track-transition
+			appearance none
