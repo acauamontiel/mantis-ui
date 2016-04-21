@@ -37,3 +37,43 @@
 
 	&__select
 		@extends .form__field-text
+
+	&__checkbox
+		position relative
+		display inline-block
+		size $form-checkbox-size
+		margin $form-checkbox-margin
+		vertical-align middle
+		color $form-checkbox-color
+		background $form-checkbox-background
+		border $form-checkbox-border
+		border-radius $form-checkbox-border-radius
+		transition $form-checkbox-transition
+
+		&:after
+			content '✔'
+			position center
+			opacity 0
+			transform translate(-50%, -50%) scale(0)
+			transition $form-checkbox-transition
+
+		&:focus
+			border-color $form-checkbox-focus-border-color
+
+		&:checked
+			border-width ($form-checkbox-size / 2)
+			border-color $form-checkbox-checked-border-color
+
+			&:after
+				opacity 1
+				transform translate(-50%, -50%) scale(1)
+
+	&__radio
+		@extends .form__checkbox
+		border-radius $form-radio-border-radius
+
+		&:after
+			content none
+
+		&:checked
+			border-width $form-radio-checked-border-width
