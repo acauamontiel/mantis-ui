@@ -119,3 +119,14 @@
 		+color-swatch()
 			border none
 			border-radius $form-field-border-radius
+
+	&__file
+		@extends .form__field-text
+
+		&::-webkit-file-upload-button
+			@extends .bt
+			@extends .bt--small
+			@extends .bt--quiet
+
+			&:focus
+				outline none
