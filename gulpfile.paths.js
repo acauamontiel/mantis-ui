@@ -1,11 +1,11 @@
 var path = {
 	src: './src/',
-	dest: './build/'
+	dest: './public/'
 };
 
 path.html = {
-	watch: `${path.src}html/**/*.jade`,
-	src: `${path.src}html/*.jade`,
+	watch: `${path.src}html/**/*.pug`,
+	src: `${path.src}html/*.pug`,
 	dest: path.dest
 };
 
