@@ -106,63 +106,97 @@ $themes = {
  * Typography
  */
 
-// Font Families
-$font-family-serif = Georgia, serif
-$font-family-sans-serif = Arial, Helvetica, sans-serif
-$font-family-monospace = Consolas, Courier, monospace
-$font-family-marvel = 'Marvel', sans-serif
+$font = {
+	// Font Names
+	alias: {
+		default: 'sans-serif',
+		brand: 'marvel',
+		reference: 'serif',
+		code: 'monospace'
+	},
 
-$font-family-default = $font-family-sans-serif
-$font-family-brand = $font-family-marvel
-$font-family-reference = $font-family-serif
-$font-family-code = $font-family-monospace
+	// Font Families
+	family: {
+		serif: unquote('Georgia, serif'),
+		sans-serif: unquote('Arial, Helvetica, sans-serif'),
+		monospace: unquote('Consolas, Courier, monospace'),
+		marvel: unquote('"Marvel", sans-serif')
+	},
 
-// Font Sizes
-$font-size-xlargest = rem(40)
-$font-size-largest = rem(32)
-$font-size-xxlarge = rem(28)
-$font-size-xlarge = rem(24)
-$font-size-large = rem(20)
-$font-size-base = rem(16)
-$font-size-small = rem(13)
-$font-size-xsmall = rem(11)
+	// Font Weights
+	weight: {
+		sans-serif-regular: normal,
+		sans-serif-bold: bold,
+		marvel-regular: 400,
+		marvel-bold: 700
+	},
 
-// Font Weights
-$font-weight-sans-serif-regular = normal
-$font-weight-sans-serif-bold = bold
-$font-weight-marvel-regular = 400
-$font-weight-marvel-bold = 700
+	// Font Sizes
+	size: {
+		xlargest: rem(40),
+		largest: rem(32),
+		xxlarge: rem(28),
+		xlarge: rem(24),
+		large: rem(20),
+		base: rem(16),
+		small: rem(13),
+		xsmall: rem(11)
+	},
 
-$font-weight-default-regular = $font-weight-sans-serif-regular
-$font-weight-default-bold = $font-weight-sans-serif-bold
-$font-weight-brand-regular = $font-weight-marvel-regular
-$font-weight-brand-bold = $font-weight-marvel-bold
+	// Font Trackings
+	tracking: {
+		default: 0em,
+		near: -0.02em,
+		far: 0.02em,
+	},
+
+	// Font Leadings
+	leading: {
+		default: 1.5em,
+		near: 1.2em,
+		far: 1.8em
+	},
+
+	scale: 100%
+}
 
 // Font Faces
-$font-faces = {
+$font.face = {
 	name: 'Marvel',
 	file: 'Marvel-Regular',
-	weight: $font-weight-brand-regular
+	weight: $font-weight-marvel-regular
 }, {
 	name: 'Marvel',
 	file: 'Marvel-Bold',
-	weight: $font-weight-brand-bold
+	weight: $font-weight-marvel-bold
 }
 
-// Font Scale
-$font-scale = 100%
-
-// Line Heights
-$line-height-base = 1.5
+// Font Definitions
+$font.family.default = $font.family[$font.alias.default]
+$font.family.brand = $font.family[$font.alias.brand]
+$font.family.reference = $font.family[$font.alias.reference]
+$font.family.code = $font.family[$font.alias.code]
+$font.weight.default = $font.weight[$font.alias.default + '-regular']
+$font.weight.brand = $font.weight[$font.alias.brand + '-regular']
 
 
 /*
  * Transition
  */
 
-$transition = $mantis.ui.transitions.default
-$transition-fast = $transition / 2
-$transition-slow = $transition * 2
+$transition = {
+	time: {
+		default: $mantis.ui.transitions.default,
+	},
+
+	easing: {
+		default: 'ease',
+		inOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+	}
+}
+
+$transition.time.fast = $transition.time.default / 2
+$transition.time.slow = $transition.time.default * 2
 
 
 /*
@@ -195,267 +229,3 @@ $mantis.grid.breakpoints = {
 	media-querie: $from.lg
 }
 grid-init()
-
-
-/*
- * Body
- */
-
-$body-font-family = $font-family-default
-$body-font-size = $font-size-base
-$body-line-height = $line-height-base
-$body-color = $color.midnight-blue
-$body-background = $color.clouds
-
-
-/*
- * Text Elements
- */
-
-// Selections
-$selection-color = $color.clouds
-$selection-background = $color.midnight-blue
-
-// Headings
-$headings-margin = 0 0 8px
-$headings-font-family = $font-family-brand
-$headings-font-weight = $font-weight-brand-bold
-$headings-color = inherit
-
-$h1-font-size = $font-size-xlargest
-$h2-font-size = $font-size-largest
-$h3-font-size = $font-size-xxlarge
-$h4-font-size = $font-size-xlarge
-$h5-font-size = $font-size-large
-$h6-font-size = $font-size-base
-
-// Paragraphs
-$p-margin = 0 0 12px
-$p-font-size = $font-size-base
-$p-color = inherit
-
-// Links
-$a-color = $color.peter-river
-$a-color-hover = $color.belize-hole
-$a-transition = $transition-fast
-
-// Other Text Elements
-$small-font-size = 75%
-
-$strong-font-weight = bold
-
-$em-font-style = italic
-
-$mark-padding = 3px
-$mark-background = rgba($color.sun-flower, .5)
-
-$abbr-border-bottom = 1px dotted $body-color
-$abbr-cursor = help
-
-$samp-font-family = $font-family-code
-
-$code-padding = 3px
-$code-font-family = $samp-font-family
-$code-color = $color.clouds
-$code-background = $color.midnight-blue
-$code-border-radius = $mantis.ui.radius.default
-$code-selection-color = $color.midnight-blue
-$code-selection-background = $color.clouds
-
-$pre-overflow = auto
-$pre-padding = 5px 10px
-$pre-font-family = $code-font-family
-$pre-color = $code-color
-$pre-background = $code-background
-$pre-border-radius = $mantis.ui.radius.default
-$pre-selection-color = $code-selection-color
-$pre-selection-background = $code-selection-background
-
-$kbd-padding = $code-padding
-$kbd-font-family = $code-font-family
-$kbd-color = $code-color
-$kbd-background = $color.asbestos
-$kbd-border-radius = $mantis.ui.radius.default
-$kbd-selection-color = $code-selection-color
-$kbd-selection-background = $code-selection-background
-
-$blockquote-padding = 15px 20px
-$blockquote-font-family = $font-family-reference
-$blockquote-font-size = inherit
-$blockquote-font-style = italic
-$blockquote-quotation-marks = true
-$blockquote-border-style = solid
-$blockquote-border-width = 0 0 0 5px
-$blockquote-border-color = $color.silver
-$blockquote-footer-color = $color.asbestos
-$blockquote-cite-font-style = italic
-
-$hr-margin = 20px 0
-$hr-border-width = 0 0 1px
-$hr-border-style = solid
-$hr-border-color = $color.silver
-
-
-/*
- * List Elements
- */
-
-// Unordered Lists
-$ul-padding = 0 0 0 20px
-$ul-list-style-type = disc
-$ul-ul-list-style-type = circle
-$ul-ul-ul-list-style-type = square
-$ul-ul-margin = 0
-
-// Ordered Lists
-$ol-padding = $ul-padding
-$ol-list-style-type = decimal
-$ol-ol-margin = $ul-ul-margin
-
-// Definition Lists
-$dt-margin = 0 0 3px
-$dt-font-weight = bold
-
-
-/*
- * Buttons
- */
-
-$bt-padding = 5px 18px
-$bt-border-width = 2px
-$bt-border-style = solid
-$bt-border-radius = $mantis.ui.radius.default
-$bt-transition = $transition-fast
-$bt-disabled-opacity = .75
-
-// Sizes
-$bt-small-padding = 0 10px
-$bt-small-font-size = $font-size-small
-
-$bt-large-padding = 8px 25px
-$bt-large-font-size = $font-size-large
-
-$bt-giant-padding = 12px 35px
-$bt-giant-font-size = $font-size-xxlarge
-
-$bt-block-margin = 3px 0 0
-
-// Default Theme
-$bt = {
-	sizes: {
-		small: {
-			padding: 0 10px,
-			font-size: $font-size-small
-		},
-		default: {
-			padding: 5px 18px,
-			font-size: $font-size-base
-		},
-		large: {
-			padding: 8px 25px,
-			font-size: $font-size-large
-		},
-		giant: {
-			padding: 12px 35px,
-			font-size: $font-size-xxlarge
-		}
-	},
-	styles: {
-		default: {
-			default: {
-				color: $color.white,
-				background: 'normal'
-				border-color: transparent
-			},
-			hover: {
-				background: 'highlight'
-			}
-		},
-		quiet: {
-			default: {
-				color: 'normal',
-				background: transparent
-			},
-			hover: {
-				color: 'highlight',
-				background: ('normal' alpha .25)
-			}
-		},
-		fussy: {
-			default: {
-				color: 'normal',
-				background: transparent,
-				border-color: 'normal'
-			},
-			hover: {
-				color: 'highlight',
-				background: ('normal' alpha .25),
-				border-color: 'highlight'
-			}
-		}
-	}
-}
-
-
-/*
- * Tables
- */
-
-$table-striped-background = alpha($color.black, 5%)
-$table-hoverable-background = alpha($color.black, 8%)
-$table-hoverable-transition = $transition-fast
-$table-framed-border = 2px solid $color.silver
-
-$table = {
-	themes: {
-		background: ('normal' lightness 88%)
-	}
-}
-
-$caption-padding = 12px 0
-$caption-color = $color.asbestos
-
-$th-padding = 12px
-$th-border-bottom = 2px solid $color.silver
-
-$td-padding = 12px
-$td-border-top = 1px solid $color.silver
-
-$tbody-color = $color.asbestos
-
-
-/*
- * Forms
- */
-
-$form-field-padding = 5px
-$form-field-color = $color.midnight-blue
-$form-field-background = $color.white
-$form-field-border = 2px solid $color.silver
-$form-field-border-radius = $mantis.ui.radius.default
-$form-field-transition = $transition-fast
-$form-field-focus-border-color = $color.asbestos
-
-$form-checkbox-size = 20px
-$form-checkbox-margin = 0 10px 0 0
-$form-checkbox-color = $color.white
-$form-checkbox-background = $form-field-background
-$form-checkbox-border = $form-field-border
-$form-checkbox-border-radius = $mantis.ui.radius.default
-$form-checkbox-transition = $form-field-transition
-$form-checkbox-focus-border-color = $form-field-focus-border-color
-$form-checkbox-checked-border-color = $form-checkbox-focus-border-color
-
-$form-radio-border-radius = 50%
-$form-radio-checked-border-width = 6px
-
-$form-range-thumb-size = 20px
-$form-range-thumb-background = $form-field-background
-$form-range-thumb-border = $form-field-border
-$form-range-thumb-transition = $form-field-transition
-$form-range-focus-thumb-border-color = $color.concrete
-
-$form-range-track-height = 2px
-$form-range-track-background = $color.silver
-$form-range-track-transition = $form-field-transition
-$form-range-focus-track-background = $form-range-focus-thumb-border-color

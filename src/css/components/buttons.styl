@@ -2,6 +2,86 @@
  * Buttons
  */
 
+$bt-padding = 5px 18px
+$bt-border-width = 2px
+$bt-border-style = solid
+$bt-border-radius = $mantis.ui.radius.default
+$bt-transition = $transition.time.fast
+$bt-disabled-opacity = .75
+
+// Sizes
+$bt-small-padding = 0 10px
+$bt-small-font-size = $font-size-small
+
+$bt-large-padding = 8px 25px
+$bt-large-font-size = $font-size-large
+
+$bt-giant-padding = 12px 35px
+$bt-giant-font-size = $font-size-xxlarge
+
+$bt-block-margin = 3px 0 0
+
+// Default Theme
+$bt = {
+	sizes: {
+		small: {
+			padding: 0 10px,
+			font-size: $font-size-small
+		},
+		default: {
+			padding: 5px 18px,
+			font-size: $font-size-base
+		},
+		large: {
+			padding: 8px 25px,
+			font-size: $font-size-large
+		},
+		giant: {
+			padding: 12px 35px,
+			font-size: $font-size-xxlarge
+		}
+	},
+	styles: {
+		default: {
+			default: {
+				color: $color.white,
+				background: 'normal'
+				border-color: transparent
+			},
+			hover: {
+				background: 'highlight'
+			}
+		},
+		quiet: {
+			default: {
+				color: 'normal',
+				background: transparent
+			},
+			hover: {
+				color: 'highlight',
+				background: ('normal' alpha .25)
+			}
+		},
+		fussy: {
+			default: {
+				color: 'normal',
+				background: transparent,
+				border-color: 'normal'
+			},
+			hover: {
+				color: 'highlight',
+				background: ('normal' alpha .25),
+				border-color: 'highlight'
+			}
+		}
+	}
+}
+
+
+/*
+ * Buttons Styles
+ */
+
 // Define state
 button-set-state($theme, $style, $state)
 	for $prop, $val in $bt.styles[$style][$state]
