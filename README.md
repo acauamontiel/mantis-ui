@@ -13,7 +13,7 @@ First of all, you need to have installed [Node.js](http://nodejs.org/) and [Gulp
 Then you can install by running the following command in your terminal:
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/mantis-stack/mantis-starter/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/mantis-stack/mantis-ui/master/install.sh)"
 ```
 
 Otherwise you can install *"manually"* doing the following steps:
@@ -115,6 +115,6 @@ README.md
 License
 -------
 
-© 2016 [Acauã Montiel](http://acauamontiel.com.br)
+© 2016 - 2017 [Acauã Montiel](http://acauamontiel.com.br)
 
 [MIT License](http://acaua.mit-license.org/)
