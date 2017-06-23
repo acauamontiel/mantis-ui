@@ -2,6 +2,7 @@
  * Forms Config
  */
 
+$form-disabled-opacity = .75
 $form-field-padding = 5px
 $form-field-color = $color.midnight-blue
 $form-field-background = $color.white
@@ -64,6 +65,35 @@ $form = {
 				padding: $form-field-giant-padding,
 				font-size: $font-size-xxlarge
 			}
+		},
+		styles: {
+			default: {
+				default: {
+					color: 'normal',
+					border-color: 'normal'
+				},
+				focus: {
+					color: 'highlight',
+					border-color: 'highlight'
+				}
+			},
+			quiet: {
+				default: {
+					border-color: transparent
+				},
+				focus: {
+					border-color: transparent
+				}
+			},
+			fussy: {
+				default: {
+					background: transparent
+				},
+				focus: {
+					background: ('normal' alpha .15),
+					border-color: 'highlight'
+				}
+			}
 		}
 	},
 	checkbox: {
@@ -79,6 +109,16 @@ $form = {
 			},
 			giant: {
 				size: $form-checkbox-giant-size
+			}
+		},
+		styles: {
+			default: {
+				default: {
+					border-color: 'normal'
+				},
+				focus: {
+					border-color: 'highlight'
+				}
 			}
 		}
 	},
@@ -96,6 +136,26 @@ $form = {
 			giant: {
 				size: $form-range-thumb-giant-size
 			}
+		},
+		styles: {
+			default: {
+				default: {
+					thumb: {
+						border-color: 'normal'
+					},
+					track: {
+						background: 'normal'
+					}
+				},
+				focus: {
+					thumb: {
+						border-color: 'highlight'
+					},
+					track: {
+						background: 'highlight'
+					}
+				}
+			}
 		}
 	}
 }
@@ -103,6 +163,55 @@ $form = {
 /*
  * Forms Styles
  */
+
+// Define state
+form-set-state($theme, $style, $state, $obj)
+	for $prop, $val in $obj
+		if length($val) is 3
+			$c = $themes[$theme][$val[0]]
+			$f = $val[1]
+			$p = $val[2]
+			{$prop} $f($c, $p)
+		else if typeof($val) is 'string'
+			$c = $themes[$theme][$val]
+			{$prop} $c
+		else
+			{$prop} $val
+
+field-set-state($theme, $style, $state)
+	form-set-state($theme, $style, $state, $form.field.styles[$style][$state])
+
+checkbox-set-state($theme, $style, $state)
+	form-set-state($theme, $style, $state, $form.checkbox.styles[$style][$state])
+
+range-set-state($theme, $style, $state)
+	+range-thumb()
+		form-set-state($theme, $style, $state, $form.range.styles[$style][$state].thumb)
+
+	+range-track()
+		form-set-state($theme, $style, $state, $form.range.styles[$style][$state].track)
+
+// Define theme
+field-theme($theme, $style)
+	field-set-state($theme, $style, 'default')
+
+	&:focus
+		field-set-state($theme, $style, 'focus')
+
+checkbox-theme($theme, $style)
+	checkbox-set-state($theme, $style, 'default')
+
+	&:focus
+		checkbox-set-state($theme, $style, 'focus')
+
+	&:checked
+		checkbox-set-state($theme, $style, 'checked')
+
+range-theme($theme, $style)
+	range-set-state($theme, $style, 'default')
+
+	&:focus
+		range-set-state($theme, $style, 'focus')
 
 .form
 	&__group
@@ -125,6 +234,11 @@ $form = {
 		&:focus
 			border-color $form-field-focus-border-color
 
+		&[disabled]
+			opacity $form-disabled-opacity
+			cursor not-allowed
+			pointer-events none
+
 	&__field-longtext
 		@extends .form__field-text
 
@@ -133,6 +247,21 @@ $form = {
 		&__field--{$size}
 			for $prop, $val in $form.field.sizes[$size]
 				{$prop} $val
+
+	// Styles
+	for $style in $form.field.styles
+		&__field--{$style}
+			field-theme 'default' $style
+
+	// Themes
+	for $theme in $themes
+		&__field--{$theme}
+			field-theme $theme 'default'
+
+			for $style in $form.field.styles
+				&.form__field--{$style}
+					field-theme $theme $style
+
 
 	&__combobox
 		position relative
@@ -178,6 +307,11 @@ $form = {
 				opacity 1
 				transform translate(-50%, -50%) scale(1)
 
+		&[disabled]
+			opacity $form-disabled-opacity
+			cursor not-allowed
+			pointer-events none
+
 		// Sizes
 		for $size in $form.checkbox.sizes
 			$border = $form.checkbox.sizes[$size].size / 2
@@ -188,6 +322,21 @@ $form = {
 
 				&:checked
 					border-width $border
+
+		// Styles
+		for $style in $form.checkbox.styles
+			&--{$style}
+				checkbox-theme 'default' $style
+
+		// Themes
+		for $theme in $themes
+			&--{$theme}
+				checkbox-theme $theme 'default'
+
+				for $style in $form.checkbox.styles
+					&.form__checkbox--{$style}
+					&.form__radio--{$style}
+						checkbox-theme $theme $style
 
 	&__radio
 		@extends .form__checkbox
@@ -239,6 +388,21 @@ $form = {
 				+range-thumb()
 					top range-thumb-top($s)
 					size $s
+
+		// Styles
+		for $style in $form.range.styles
+			&--{$style}
+				range-theme 'default' $style
+
+		// Themes
+		for $theme in $themes
+			&--{$theme}
+				range-theme $theme 'default'
+
+				for $style in $form.range.styles
+					&.form__checkbox--{$style}
+					&.form__radio--{$style}
+						range-theme $theme $style
 
 	&__color
 		@extends .form__field-text
