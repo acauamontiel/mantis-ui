@@ -566,10 +566,37 @@ block content
 			hr
 
 			fieldset.form__group
+				input.form__field-text.form__field--small(type='text', placeholder='Placeholder')
+
+			fieldset.form__group
 				input.form__field-text(type='text', placeholder='Placeholder')
 
 			fieldset.form__group
-				textarea.form__field-longtext(rows='5', placeholder='Placeholder')
+				input.form__field-text.form__field--large(type='text', placeholder='Placeholder')
+
+			fieldset.form__group
+				input.form__field-text.form__field--giant(type='text', placeholder='Placeholder')
+
+			fieldset.form__group
+				textarea.form__field-longtext.form__field--small(rows='3', placeholder='Placeholder')
+
+			fieldset.form__group
+				textarea.form__field-longtext(rows='3', placeholder='Placeholder')
+
+			fieldset.form__group
+				textarea.form__field-longtext.form__field--large(rows='3', placeholder='Placeholder')
+
+			fieldset.form__group
+				textarea.form__field-longtext.form__field--giant(rows='3', placeholder='Placeholder')
+
+			fieldset.form__group
+				.form__combobox
+					select.form__select.form__field--small
+						option(value='1') Option 1
+						option(value='2') Option 2
+						option(value='3') Option 3
+						option(value='4') Option 4
+						option(value='5') Option 5
 
 			fieldset.form__group
 				.form__combobox
@@ -581,6 +608,32 @@ block content
 						option(value='5') Option 5
 
 			fieldset.form__group
+				.form__combobox
+					select.form__select.form__field--large
+						option(value='1') Option 1
+						option(value='2') Option 2
+						option(value='3') Option 3
+						option(value='4') Option 4
+						option(value='5') Option 5
+
+			fieldset.form__group
+				.form__combobox
+					select.form__select.form__field--giant
+						option(value='1') Option 1
+						option(value='2') Option 2
+						option(value='3') Option 3
+						option(value='4') Option 4
+						option(value='5') Option 5
+
+			fieldset.form__group
+				select.form__select.form__field--small(multiple)
+					option(value='1') Option 1
+					option(value='2') Option 2
+					option(value='3') Option 3
+					option(value='4') Option 4
+					option(value='5') Option 5
+
+			fieldset.form__group
 				select.form__select(multiple)
 					option(value='1') Option 1
 					option(value='2') Option 2
@@ -589,27 +642,48 @@ block content
 					option(value='5') Option 5
 
 			fieldset.form__group
+				select.form__select.form__field--large(multiple)
+					option(value='1') Option 1
+					option(value='2') Option 2
+					option(value='3') Option 3
+					option(value='4') Option 4
+					option(value='5') Option 5
+
+			fieldset.form__group
+				select.form__select.form__field--giant(multiple)
+					option(value='1') Option 1
+					option(value='2') Option 2
+					option(value='3') Option 3
+					option(value='4') Option 4
+					option(value='5') Option 5
+
+			fieldset.form__group
 				label.form__label
+					input.form__checkbox.form__checkbox--small(type='checkbox')
 					input.form__checkbox(type='checkbox')
+					input.form__checkbox.form__checkbox--large(type='checkbox')
+					input.form__checkbox.form__checkbox--giant(type='checkbox')
 					| Label text
 
 			fieldset.form__group
 				label.form__label
+					input.form__radio.form__radio--small(type='radio', name='example')
 					input.form__radio(type='radio', name='example')
+					input.form__radio.form__radio--large(type='radio', name='example')
+					input.form__radio.form__radio--giant(type='radio', name='example')
 					| Label text
 
 			fieldset.form__group
-				label.form__label
-					input.form__radio(type='radio', name='example')
-					| Label text
-
-			fieldset.form__group
-				label.form__label
-					input.form__radio(type='radio', name='example')
-					| Label text
+				input.form__range.form__range--small(type='range')
 
 			fieldset.form__group
 				input.form__range(type='range')
+
+			fieldset.form__group
+				input.form__range.form__range--large(type='range')
+
+			fieldset.form__group
+				input.form__range.form__range--giant(type='range')
 
 			fieldset.form__group
 				input.form__color(type='color')

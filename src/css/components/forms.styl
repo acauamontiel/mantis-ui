@@ -10,6 +10,10 @@ $form-field-border-radius = $mantis.ui.radius.default
 $form-field-transition = $transition.time.fast
 $form-field-focus-border-color = $color.asbestos
 
+$form-field-small-padding = 0 5px
+$form-field-large-padding = 8px
+$form-field-giant-padding = 8px
+
 $form-checkbox-size = 20px
 $form-checkbox-margin = 0 10px 0 0
 $form-checkbox-color = $color.white
@@ -20,6 +24,10 @@ $form-checkbox-transition = $form-field-transition
 $form-checkbox-focus-border-color = $form-field-focus-border-color
 $form-checkbox-checked-border-color = $form-checkbox-focus-border-color
 
+$form-checkbox-small-size = 15px
+$form-checkbox-large-size = 25px
+$form-checkbox-giant-size = 30px
+
 $form-radio-border-radius = 50%
 $form-radio-checked-border-width = 6px
 
@@ -29,11 +37,68 @@ $form-range-thumb-border = $form-field-border
 $form-range-thumb-transition = $form-field-transition
 $form-range-focus-thumb-border-color = $color.concrete
 
+$form-range-thumb-small-size = 15px
+$form-range-thumb-large-size = 25px
+$form-range-thumb-giant-size = 30px
+
 $form-range-track-height = 2px
 $form-range-track-background = $color.silver
 $form-range-track-transition = $form-field-transition
 $form-range-focus-track-background = $form-range-focus-thumb-border-color
 
+$form = {
+	field: {
+		sizes: {
+			small: {
+				padding: $form-field-small-padding,
+				font-size: $font-size-small
+			},
+			default: {
+				padding: $form-field-padding
+			},
+			large: {
+				padding: $form-field-large-padding,
+				font-size: $font-size-large
+			},
+			giant: {
+				padding: $form-field-giant-padding,
+				font-size: $font-size-xxlarge
+			}
+		}
+	},
+	checkbox: {
+		sizes: {
+			small: {
+				size: $form-checkbox-small-size
+			},
+			default: {
+				size: $form-checkbox-size
+			}
+			large: {
+				size: $form-checkbox-large-size
+			},
+			giant: {
+				size: $form-checkbox-giant-size
+			}
+		}
+	},
+	range: {
+		sizes: {
+			small: {
+				size: $form-range-thumb-small-size
+			},
+			default: {
+				size: $form-range-thumb-size
+			}
+			large: {
+				size: $form-range-thumb-large-size
+			},
+			giant: {
+				size: $form-range-thumb-giant-size
+			}
+		}
+	}
+}
 
 /*
  * Forms Styles
@@ -62,6 +127,12 @@ $form-range-focus-track-background = $form-range-focus-thumb-border-color
 
 	&__field-longtext
 		@extends .form__field-text
+
+	// Sizes
+	for $size in $form.field.sizes
+		&__field--{$size}
+			for $prop, $val in $form.field.sizes[$size]
+				{$prop} $val
 
 	&__combobox
 		position relative
@@ -107,6 +178,17 @@ $form-range-focus-track-background = $form-range-focus-thumb-border-color
 				opacity 1
 				transform translate(-50%, -50%) scale(1)
 
+		// Sizes
+		for $size in $form.checkbox.sizes
+			$border = $form.checkbox.sizes[$size].size / 2
+
+			&--{$size}
+				for $prop, $val in $form.checkbox.sizes[$size]
+					{$prop} $val
+
+				&:checked
+					border-width $border
+
 	&__radio
 		@extends .form__checkbox
 		border-radius $form-radio-border-radius
@@ -118,6 +200,9 @@ $form-range-focus-track-background = $form-range-focus-thumb-border-color
 			border-width $form-radio-checked-border-width
 
 	&__range
+		range-thumb-top($size)
+			return (($size / 2) * -1) + ($form-range-track-height / 2)
+
 		width 100%
 		height $form-range-thumb-size
 		appearance none
@@ -131,7 +216,7 @@ $form-range-focus-track-background = $form-range-focus-thumb-border-color
 
 		+range-thumb()
 			position relative
-			top (($form-range-thumb-size / 2) * -1) + ($form-range-track-height / 2)
+			top range-thumb-top($form-range-thumb-size)
 			size $form-range-thumb-size
 			background $form-range-thumb-background
 			border $form-range-thumb-border
@@ -146,6 +231,14 @@ $form-range-focus-track-background = $form-range-focus-thumb-border-color
 			background $form-range-track-background
 			transition $form-range-track-transition
 			appearance none
+
+		// Sizes
+		for $size in $form.range.sizes
+			$s = $form.range.sizes[$size].size
+			&--{$size}
+				+range-thumb()
+					top range-thumb-top($s)
+					size $s
 
 	&__color
 		@extends .form__field-text
