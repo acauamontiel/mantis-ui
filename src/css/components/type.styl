@@ -351,3 +351,23 @@ $text-elements = ()
 	for i in $text-elements
 		{slice(i, 1)}
 			@extends {i}
+
+
+/*
+ * Text Themes
+ */
+
+// Define theme
+text-theme($theme)
+	$c = $themes[$theme].normal
+	color $c !important
+
+// Set themes
+.text
+	for $theme in $themes
+		if $theme is 'default'
+			&--muted
+				text-theme $theme
+		else
+			&--{$theme}
+				text-theme $theme
