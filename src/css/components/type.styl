@@ -133,7 +133,7 @@ $hr-border-color = $color.silver
 
 
 /*
- * Text Styles
+ * Text Types
  */
 
 // Types
@@ -165,7 +165,7 @@ body
 
 
 /*
- * "Classful" Text Styles
+ * "Classful" Text Types
  */
 
 $text-elements = ()
@@ -354,7 +354,7 @@ $text-elements = ()
 
 
 /*
- * Text Themes
+ * Text Styles
  */
 
 // Define theme
@@ -362,8 +362,35 @@ text-theme($theme)
 	$c = $themes[$theme].normal
 	color $c !important
 
-// Set themes
 .text
+	// Misc
+	$text-alignments = left right center justify
+	$text-transformations = uppercase lowercase capitalize
+
+	for i in $text-alignments
+		&--{i}
+			text-align i
+
+	for i in $text-transformations
+		&--{i}
+			text-transform i
+
+	&--break
+		overflow-wrap break-word
+		word-wrap break-word
+		hyphens auto
+
+		th&
+		td&
+			word-break break-all
+
+	&--nowrap
+		white-space nowrap
+
+	&--ellipsis
+		ellipsis()
+
+	// Themes
 	for $theme in $themes
 		if $theme is 'default'
 			&--muted

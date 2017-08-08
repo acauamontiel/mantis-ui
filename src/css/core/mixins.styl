@@ -87,6 +87,21 @@ max-size($width, $height = $width)
 
 
 /*
+ * Ellipsis Mixin
+ */
+
+ellipsis()
+	overflow hidden
+	max-width 100%
+	text-overflow ellipsis
+	white-space nowrap
+
+	th&
+	td&
+		max-width 0
+
+
+/*
  * Parent Selector
  */
 
