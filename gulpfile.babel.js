@@ -182,7 +182,7 @@ gulp.task('dist', () => {
 
 gulp.task('default', () => {
 	var startTime = Date.now();
-	runSequence('serve', 'build', 'watch', () => {
+	runSequence('build', 'serve', 'watch', () => {
 		console.log('\x1b[42m************************************\x1b[0m\n');
 		console.log('\x1b[32m  Mantis Starter is ready to work!\x1b[0m\n');
 		console.log('\x1b[42m************************************\x1b[0m\n');
