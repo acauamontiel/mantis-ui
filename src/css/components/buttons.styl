@@ -147,3 +147,51 @@ button-theme($theme, $style)
 			for $style in $bt.styles
 				&.bt--{$style}
 					button-theme $theme $style
+
+	&-group
+		display inline-flex
+		vertical-align middle
+
+		.bt
+			&:not(:first-child):not(:last-child)
+				border-radius 0
+
+			&:not(:first-child)
+				margin-left -($bt-border-width)
+
+			&:first-child
+				border-top-right-radius 0
+				border-bottom-right-radius 0
+
+			&:last-child
+				border-top-left-radius 0
+				border-bottom-left-radius 0
+
+		&-vertical
+			display inline-flex
+			flex-direction column
+			align-items flex-start
+			justify-content center
+
+			.bt
+				width 100%
+
+				&:not(:first-child):not(:last-child)
+					border-radius 0
+
+				&:not(:first-child)
+					margin-top -($bt-border-width)
+
+				&:first-child
+					border-bottom-left-radius 0
+					border-bottom-right-radius 0
+
+				&:last-child
+					border-top-left-radius 0
+					border-top-right-radius 0
+
+		// Sizes
+		for $size in $bt.sizes
+			&--{$size}
+				.bt
+					@extends .bt--{$size}
