@@ -10,6 +10,7 @@ $form-field-border = 2px solid $color.silver
 $form-field-border-radius = $mantis.ui.radius.default
 $form-field-transition = $transition.time.fast
 $form-field-focus-border-color = $color.asbestos
+$form-field-group-addon = alpha($color.black, 50%)
 
 $form-field-small-padding = 0 5px
 $form-field-large-padding = 8px
@@ -219,6 +220,38 @@ range-theme($theme, $style)
 
 	&__label
 		cursor pointer
+
+	&__field-group
+		position relative
+		display flex
+		align-items stretch
+
+		&__addon
+		.bt
+		.form__field-text
+			&:not(:first-child):not(:last-child)
+				border-radius 0
+				border-left-width 0
+				border-right-width 0
+
+			&:first-child
+				border-right-width 0
+				border-top-right-radius 0
+				border-bottom-right-radius 0
+
+			&:last-child
+				border-left-width 0
+				border-top-left-radius 0
+				border-bottom-left-radius 0
+
+		&__addon
+			padding $form-field-padding ($form-field-padding * 2)
+			vertical-align middle
+			color $form-field-group-addon
+			border $form-field-border
+			background $form-field-border[2]
+			border-radius $form-field-border-radius
+			cursor default
 
 	&__field-text
 		display block
