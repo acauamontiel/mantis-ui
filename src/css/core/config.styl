@@ -160,24 +160,24 @@ $font = {
 	scale: 100%
 }
 
-// Font Faces
-$font.face = {
-	name: 'Marvel',
-	file: 'Marvel-Regular',
-	weight: $font-weight-marvel-regular
-}, {
-	name: 'Marvel',
-	file: 'Marvel-Bold',
-	weight: $font-weight-marvel-bold
-}
-
 // Font Definitions
 $font.family.default = $font.family[$font.alias.default]
 $font.family.brand = $font.family[$font.alias.brand]
 $font.family.reference = $font.family[$font.alias.reference]
 $font.family.code = $font.family[$font.alias.code]
 $font.weight.default = $font.weight[$font.alias.default + '-regular']
-$font.weight.brand = $font.weight[$font.alias.brand + '-regular']
+$font.weight.brand = $font.weight[$font.alias.brand + '-bold']
+
+// Font Faces
+$font.face = {
+	name: 'Marvel',
+	file: 'Marvel-Regular',
+	weight: $font.weight.marvel-regular
+}, {
+	name: 'Marvel',
+	file: 'Marvel-Bold',
+	weight: $font.weight.marvel-bold
+}
 
 
 /*
@@ -229,3 +229,15 @@ $mantis.grid.breakpoints = {
 	media-querie: $from.lg
 }
 grid-init()
+
+
+/*
+ * Layers
+ *
+ * See how to use Mantis Layers:
+ * https://github.com/mantis-stack/mantis-layers
+ */
+
+$mantis.layers.context = {
+	default: (body dropdown)
+}
