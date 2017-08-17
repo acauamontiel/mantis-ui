@@ -1000,4 +1000,45 @@ block content
 
 			hr
 
-			p.ui #[+icon('github')] #[small See #[a(href='https://github.com/mantis-stack/mantis-ui', target='_blank') Mantis UI on GitHub]].
+			p.p Navbar:
+
+			nav.navbar.navbar--expand-lg
+				.grid
+					a.navbar__brand
+						img.icon(src='./img/logo.svg')
+						| Mantis UI
+
+					.navbar__collapse
+						ul.navbar__nav
+							li.navbar__nav__item
+								a(href='#!').navbar__link Link 1
+							li.navbar__nav__item
+								a(href='#!').navbar__link Link 2
+						ul.navbar__nav
+							li.navbar__nav__item.dropdown
+								button.navbar__link.dropdown__toggle Link 1
+								.dropdown__list.dropdown__list--bottom-right
+									.dropdown__header Header
+									a(href='#!').dropdown__item Item 1
+									span.dropdown__item Item 2 - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									a(href='#!').dropdown__item Item 3
+									hr.dropdown__separator
+									a(href='#!').dropdown__item Item 4
+							li.navbar__nav__item
+								a(href='#!').navbar__link.navbar__link--active Link 2
+							li.navbar__nav__item
+								a(href='#!').navbar__link.navbar__link--disabled Link 3
+							li.navbar__nav__item
+								a(href='#!').navbar__link Link 4
+						.navbar__nav
+							.form__field-group
+								input(type='search', placeholder='Type your search here').form__field-text
+								button.bt.bt--success Search
+
+					button.navbar__menu.bt.bt--fussy
+						+icon('menu')
+
+			hr.hr
+
+			.ui
+				p #[+icon('github')] #[small See #[a(href='https://github.com/mantis-stack/mantis-ui', target='_blank') Mantis UI on GitHub]].
