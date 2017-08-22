@@ -11,5 +11,8 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/mantis-stack/mantis-ui",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "mantis-js": "^0.20.1"
+  }
 }
