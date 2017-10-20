@@ -19,6 +19,7 @@ import del from 'del';
 import runSequence from 'run-sequence';
 import nib from 'nib';
 import path from './gulpfile.paths.js';
+import fs from 'fs';
 
 var dev = true;
 
@@ -37,7 +38,10 @@ gulp.task('html', () =>
 			return require('./content.json');
 		}))
 		.pipe($.pug({
-			pretty: dev
+			pretty: dev,
+			locals: {
+				icons: fs.readdirSync(`${__dirname}/src/img/sprite`)
+			}
 		}))
 		.pipe(gulp.dest(path.html.dest))
 		.pipe($.size({title: 'html'}))

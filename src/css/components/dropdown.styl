@@ -71,8 +71,13 @@ $dropdown-item-hover-background = $color.clouds
 				margin-top 0
 				margin-bottom $dropdown-list-margin
 
+	&__close
+		float right
+		padding 5px
+		font-size 20px
+
 	&__header
-		@extends .strong
+		@extends .strong, .text--ellipsis
 		padding $dropdown-header-padding
 		font-family $dropdown-header-font-family
 		font-weight $dropdown-header-font-weight
