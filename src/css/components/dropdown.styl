@@ -76,6 +76,9 @@ $dropdown-item-hover-background = $color.clouds
 		padding 5px
 		font-size 20px
 
+		@media $from.md
+			display none
+
 	&__header
 		@extends .strong, .text--ellipsis
 		padding $dropdown-header-padding
