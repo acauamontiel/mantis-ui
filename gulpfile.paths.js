@@ -11,13 +11,13 @@ path.html = {
 
 path.css = {
 	watch: `${path.src}css/**/*.styl`,
-	src: `${path.src}css/style.styl`,
+	src: `${path.src}css/*.styl`,
 	dest: `${path.dest}css/`
 };
 
 path.js = {
 	watch: `${path.src}js/**/*.js`,
-	src: `${path.src}js/app.js`,
+	src: `${path.src}js/*.js`,
 	dest: `${path.dest}js/`
 };
 

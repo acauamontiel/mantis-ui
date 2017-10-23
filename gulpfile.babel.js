@@ -20,6 +20,7 @@ import runSequence from 'run-sequence';
 import nib from 'nib';
 import path from './gulpfile.paths.js';
 import fs from 'fs';
+import {version} from './package.json';
 
 var dev = true;
 
@@ -40,6 +41,7 @@ gulp.task('html', () =>
 		.pipe($.pug({
 			pretty: dev,
 			locals: {
+				version: version,
 				icons: fs.readdirSync(`${__dirname}/src/img/sprite`)
 			}
 		}))
