@@ -1,0 +1,29 @@
+#docs-home
+	.layout__content
+		padding-top 68px
+		max-width 380px
+
+		@media $from.md
+			max-width 460px
+
+		@media $from.lg
+			max-width 520px
+
+	&__logo
+		margin-bottom 20px
+		width 250px
+		max-width 50%
+
+	&__title
+		@extends .h4
+		margin-bottom 20px
+
+		@media $from.md
+			font-size $h2-font-size
+
+		@media $from.lg
+			font-size $h1-font-size
+
+	&__ctas
+		.bt
+			margin 8px

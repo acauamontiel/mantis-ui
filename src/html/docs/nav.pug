@@ -1,4 +1,4 @@
-nav.navbar.navbar--expand-lg.navbar--sticky
+nav.navbar.navbar--expand-lg(class={'navbar--sticky': page.section === 'home'})
 	.navbar__brand
 		a(href='/', title='Mantis UI')
 			img.icon(src='./img/logo.svg')
@@ -13,12 +13,9 @@ nav.navbar.navbar--expand-lg.navbar--sticky
 				.dropdown__list.dropdown__list--bottom-left
 					button.dropdown__close
 						+icon('close')
-					.dropdown__header Get started
-					a.dropdown__item(href='#!') Introduction
-					a.dropdown__item(href='#!') Usage
-					hr.dropdown__separator
-					.dropdown__header Typography
-					a.dropdown__item(href='#!') Introduction
+					a.dropdown__item(href='/documentation.html#get-started') Get started
+					a.dropdown__item(href='/documentation.html#typography') Typography
+					a.dropdown__item(href='/documentation.html#lists') Lists
 			li.navbar__nav__item
 				a.navbar__link.navbar__link--disabled(title='Soon', class={'navbar__link--active': page.section === 'examples'}) Examples
 			li.navbar__nav__item

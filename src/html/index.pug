@@ -2,23 +2,17 @@ extends layouts/docs
 
 block content
 	- var page = {section: 'home'};
-	- console.log(this);
 
-	include includes/nav
+	include docs/nav
 
-	section#docs-home.grid.grid--column.text--center
-		#docs-home__content.grid.grid--align-center.grid--justify-center
+	main#docs-home.layout.grid.grid--column
+		section.layout__content.grid.grid--align-center.grid--justify-center.text--center
 			img#docs-home__logo(src='./img/logo.svg')
 			h1#docs-home__title The fastest and most up-to-date modular front-end framework
 
 			#docs-home__ctas
-				a.bt.bt--large.bt--primary(href='#') #[+icon('navigate-next')] Get started
+				a.bt.bt--large.bt--primary(href='documentation.html') #[+icon('navigate-next')] Get started
 				a.bt.bt--large.bt--fussy(href='https://github.com/mantis-stack/mantis-ui', title='GitHub', target='_blank') #[+icon('github')] GitHub
 
-		#docs-home__footer.grid__item-sm--auto
-			p.small.em.text--muted Version #{version}
+		include docs/footer
 
-			a(class='github-button', href='https://github.com/mantis-stack/mantis-ui', data-icon='octicon-star', data-show-count='true', aria-label='Star mantis-stack/mantis-ui on GitHub') Star
-			a(class='github-button', href='https://github.com/mantis-stack/mantis-ui/fork', data-icon='octicon-repo-forked', data-show-count='true', aria-label='Fork mantis-stack/mantis-ui on GitHub') Fork
-
-	script(async, defer, src='https://buttons.github.io/buttons.js')

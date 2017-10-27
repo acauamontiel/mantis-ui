@@ -17,7 +17,7 @@ path.css = {
 
 path.js = {
 	watch: `${path.src}js/**/*.js`,
-	src: `${path.src}js/*.js`,
+	src: `${path.src}js/app.js`,
 	dest: `${path.dest}js/`
 };
 

@@ -1,0 +1,107 @@
+section#get-started.layout__content.ui.grid__item-sm--12
+	h1 Get Started
+
+	article#introduction.layout__article
+		h2 Introduction
+
+		p ...
+
+	hr
+
+	article#usage.layout__article
+		h2 Usage
+
+		p First of all, you need #[a(href='https://nodejs.org', title='Node.js', target='_blank') Node.js] and #[a(href='https://gulpjs.com/', title='Gulp', target='_blank') Gulp] installed globally. Then you can install by running the following command in your terminal:
+
+		pre sh -c "$(curl -fsSL https://raw.githubusercontent.com/mantis-stack/mantis-ui/master/install.sh)"
+
+		p Otherwise you can install #[em "manually"] doing the following steps:
+
+		ul
+			li
+				p Clone the repo: #[code git clone git@github.com:mantis-stack/mantis-ui.git project-name]
+			li
+				p Enter the folder: #[code cd project-name]
+			li
+				p Install Node dependencies: #[code npm install]
+			li
+				p Finally install Bower components: #[code bower install]
+
+		p But I recommend you to install the easiest way.
+
+		h3#gulp-commands Gulp commands
+
+		dl
+			dt Default: #[code gulp]
+			dd Run gulp to compile and watch files running on #[a(href='http://localhost:3000') localhost:3000]
+
+		dl
+			dt Build: #[code gulp build]
+			dd Run gulp build to compile the files
+
+		dl
+			dt Dist: #[code gulp dist]
+			dd Run gulp dist to compile, optimize and minify files
+
+		dl
+			dt Clean: #[code gulp clean]
+			dd Run gulp clean to delete the build/ folder (same as rm -rf public)
+
+	article#structure.layout__article
+		h2 Structure
+
+		p Once the installation is finished, the structure will look like this:
+
+		pre.
+			node_modules/
+			src/
+			├── dependencies/
+			├── copy/
+			│   ├── fonts/
+			│   │   └── *.{eot|svg|ttf|woff}
+			│   ├── **/*
+			├── css/
+			│   ├── components/
+			│   │   └── *.styl
+			│   ├── core/
+			│   │   └── *.styl
+			│   └── style.styl
+			├── fonts/
+			│   └── *.{eot|svg|ttf|woff}
+			├── html/
+			│   ├── incs/
+			│   │   └── *.pug
+			│   ├── layouts/
+			│   │   └── *.pug
+			│   └── index.pug
+			├── img/
+			│   ├── backgrounds/
+			│   │   └── *.{jpg|png|svg}
+			│   ├── favicons/
+			│   │   └── *.{png|svg}
+			│   ├── sprite/
+			│   │   └── *.svg
+			│   └── *.{jpg|png|svg}
+			└── js/
+			    ├── app/
+			    │   ├── index.js
+			    │   └── *.js
+			    ├── modules/
+			    │   └── *.js
+			    └── app.js
+			.babelrc
+			.bowerrc
+			.editorconfig
+			.eslintrc
+			.gitattributes
+			.gitignore
+			bower.json
+			content.json
+			gulpfile.babel.js
+			gulpfile.paths.js
+			logo.png
+			logo.svg
+			package.json
+			README.md
+
+hr.hr

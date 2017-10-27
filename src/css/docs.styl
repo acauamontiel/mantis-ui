@@ -1,7 +1,6 @@
 @import 'nib'
 
 // Mantis Stack
-@import 'mantis-equalizr'
 @import 'mantis-querist'
 @import 'mantis-grid'
 @import 'mantis-layers'
@@ -13,43 +12,5 @@
 // Components
 @import 'components/type'
 
-#docs-home
-	padding-top 85px
-	width 100vw
-	min-height 100vh
-
-	&__content
-		flex-grow 1
-		margin 0 auto
-		max-width 380px
-
-		@media $from.md
-			max-width 460px
-
-		@media $from.lg
-			max-width 520px
-
-	&__logo
-		margin-bottom 20px
-		width 250px
-		max-width 50%
-
-	&__title
-		@extends .h4
-		margin-bottom 20px
-
-		@media $from.md
-			font-size $h2-font-size
-
-		@media $from.lg
-			font-size $h1-font-size
-
-	&__ctas
-		.bt
-			margin 8px
-
-	&__footer
-		margin-top 20px
-
-		iframe
-			margin 5px 10px
+// Docs
+@import 'docs'

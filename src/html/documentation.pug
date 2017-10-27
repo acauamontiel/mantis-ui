@@ -1,0 +1,13 @@
+extends layouts/docs
+
+block content
+	- var page = {section: 'docs'};
+
+	include docs/nav
+
+	main#docs-documentation.layout.grid.grid--column
+		include docs/sections/get-started
+		include docs/sections/typography
+		include docs/sections/lists
+
+		include docs/footer

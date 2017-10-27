@@ -1,0 +1,143 @@
+section#typography.layout__content.ui.grid__item-sm--12
+	h1 Typography
+
+	article#headings.layout__article
+		h2 Headings
+
+		table.table
+			thead
+				tr
+					th Heading
+					th Example
+			tbody
+				tr
+					td #[code .ui h1] or #[code .h1]
+					td #[h1 Heading 1]
+				tr
+					td #[code .ui h2] or #[code .h2]
+					td #[h2 Heading 2]
+				tr
+					td #[code .ui h3] or #[code .h3]
+					td #[h3 Heading 3]
+				tr
+					td #[code .ui h4] or #[code .h4]
+					td #[h4 Heading 4]
+				tr
+					td #[code .ui h5] or #[code .h5]
+					td #[h5 Heading 5]
+				tr
+					td #[code .ui h6] or #[code .h6]
+					td #[h6 Heading 6]
+
+	article#inline-text-elements.layout__article
+		h2 Inline Text Elements
+
+		p Styling elements for common inline HTML5 elements.
+		br
+
+		p You can use the mark tag to #[mark highlight] text.
+		p #[code ui. mark] or #[code .mark]
+		br
+
+		p #[del This line of text is meant to be treated as deleted text.]
+		p #[code ui. del] or #[code .del]
+		br
+
+		p #[s This line of text is meant to be treated as no longer accurate.]
+		p #[code ui. s] or #[code .s]
+		br
+
+		p #[ins This line of text is meant to be treated as an addition to the document.]
+		p #[code ui. ins] or #[code .ins]
+		br
+
+		p #[u This line of text will render as underlined]
+		p #[code ui. u] or #[code .u]
+		br
+
+		p #[small This line of text is meant to be treated as fine print.]
+		p #[code ui. small] or #[code .small]
+		br
+
+		p #[strong This line rendered as bold text.]
+		p #[code ui. strong] or #[code .strong]
+		br
+
+		p #[em This line rendered as italicized text.]
+		p #[code ui. em] or #[code .em]
+		br
+
+		p Lorem ipsum dolor sit amet, #[abbr(title='Hyper Text Markup Language') HTML] adipisicing elit.
+		p #[code ui. abbr] or #[code .abbr]
+		br
+
+		p Output: #[samp Lorem ipsum dolor sit amet, consectetur adipisicing elit.]
+		p #[code ui. samp] or #[code .samp]
+		br
+
+		p For example, #[code &lt;section&gt;] should be wrapped as inline.
+		p #[code ui. code] or #[code .code]
+		br
+
+		p To edit settings, press #[kbd #[kbd ctrl] + #[kbd ,]]
+		p #[code ui. kbd] or #[code .kbd]
+		br
+
+	article#block-text-elements.layout__article
+		h2 Block Text Elements
+
+		h3 Paragraphs
+
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex tenetur consequatur culpa provident aut beatae quibusdam quasi, quas explicabo, quae nam et incidunt neque optio enim ut distinctio temporibus accusantium?
+		pre p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex tenetur consequatur culpa provident aut beatae quibusdam quasi, quas explicabo, quae nam et incidunt neque optio enim ut distinctio temporibus accusantium?
+		br
+
+		h3 Blockquotes
+
+		p For quoting blocks of content from another source within your document. Use #[code .ui blockquote] or #[code .blockquote] to make a quoting.
+		br
+
+		blockquote
+			p.blockquote__quote Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			footer.blockquote__footer Someone famous like #[cite.blockquote__cite(title='Acauã Montiel') Acauã Montiel]
+
+		pre.
+			blockquote
+			    p.blockquote__quote Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			    footer.blockquote__footer Someone famous like \#[cite.blockquote__cite(title='Acauã Montiel') Acauã Montiel]
+
+		br
+
+		h3 Code
+
+		p For coding blocks. Use #[code .ui pre] or #[code .pre].
+		br
+
+		pre.
+			import init from '../modules/init';
+
+			export default class App {
+			    constructor() {
+			        this.id = Date.now();
+			    }
+
+			    init(callback) {
+			        init.call(this, callback);
+			    }
+			}
+
+		pre.
+			pre.
+			    import init from '../modules/init';
+
+			    export default class App {
+			        constructor() {
+			            this.id = Date.now();
+			        }
+
+			        init(callback) {
+			            init.call(this, callback);
+			        }
+			    }
+
+hr.hr
