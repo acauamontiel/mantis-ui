@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Mantis UI</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#338656">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#338656">
+    <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#338656">
+    <meta name="robots" content="all">
+    <meta name="description" content="The fastest and most up-to-date modular front-end framework">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="rating" content="General">
+    <meta name="date" content="">
+    <meta name="copyright" content="">
+    <meta name="contact" content="">
+    <meta name="reply-to" content="">
+    <meta name="generator" content="Sublime Text 3">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="Mantis UI">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="img/share-image.png">
+    <meta property="og:description" content="The fastest and most up-to-date modular front-end framework">
+    <meta property="og:locale" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tripleverge">
+    <meta name="twitter:creator" content="@acauamontiel">
+    <meta name="twitter:title" content="Mantis UI">
+    <meta name="twitter:description" content="The fastest and most up-to-date modular front-end framework">
+    <meta name="twitter:image" content="img/share-image.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <link rel="stylesheet" type="text/css" href="css/docs.css">
+  <body>
+    <nav class="navbar navbar--expand-lg">
+      <div class="navbar__brand"><a href="/" title="Mantis UI"><img class="icon" src="./img/logo.svg">Mantis UI</a></div>
+      <div class="navbar__collapse">
+        <ul class="navbar__nav">
+          <li class="navbar__nav__item"><a class="navbar__link" href="/" title="Home">Home</a></li>
+          <li class="navbar__nav__item dropdown">
+            <button class="navbar__link dropdown__toggle navbar__link--active" title="Documentation">Documentation</button>
+            <div class="dropdown__list dropdown__list--bottom-left">
+              <button class="dropdown__close">
+                <svg class="icon icon--close">
+                  <use xlink:href="./img/sprite.svg#close"></use>
+                </svg>
+              </button><a class="dropdown__item" href="/documentation.html#get-started">Get started</a><a class="dropdown__item" href="/documentation.html#typography">Typography</a><a class="dropdown__item" href="/documentation.html#lists">Lists</a>
+            </div>
+          </li>
+          <li class="navbar__nav__item"><a class="navbar__link navbar__link--disabled" title="Soon">Examples</a></li>
+          <li class="navbar__nav__item"><a class="bt bt--fussy bt--success" href="https://github.com/mantis-stack/mantis-ui/archive/master.zip" title="Download" target="_blank">
+              <svg class="icon icon--file-download">
+                <use xlink:href="./img/sprite.svg#file-download"></use>
+              </svg> Download</a></li>
+        </ul>
+      </div>
+      <button class="navbar__menu bt bt--fussy">
+        <svg class="icon icon--menu">
+          <use xlink:href="./img/sprite.svg#menu"></use>
+        </svg>
+      </button>
+    </nav>
+    <main class="layout grid ui" id="docs-documentation">
+      <aside class="layout__sidebar">
+        <dl>
+          <dt>Get Started</dt>
+          <dd><a href="documentation.html#introduction">Introduction</a></dd>
+          <dd><a href="documentation.html#usage">Usage</a></dd>
+          <dd><a href="documentation.html#structure">Structure</a></dd>
+        </dl>
+        <dl>
+          <dt>Typography</dt>
+          <dd><a href="documentation.html#headings">Headings</a></dd>
+          <dd><a href="documentation.html#inline-text-elements">Inline Text Elements</a></dd>
+          <dd><a href="documentation.html#block-text-elements">Block Text Elements</a></dd>
+          <dd><a href="documentation.html#text-utilities">Text Utilities</a></dd>
+        </dl>
+      </aside>
+      <div class="layout__scrollable grid__item-sm grid grid--justify-center">
+        <section class="layout__content ui grid__item-sm--12" id="get-started">
+          <h1>Get Started</h1>
+          <article class="layout__article" id="introduction">
+            <h2>Introduction</h2>
+            <p>...</p>
+          </article>
+          <hr>
+          <article class="layout__article" id="usage">
+            <h2>Usage</h2>
+            <p>First of all, you need <a href="https://nodejs.org" title="Node.js" target="_blank">Node.js</a> and <a href="https://gulpjs.com/" title="Gulp" target="_blank">Gulp</a> installed globally. Then you can install by running the following command in your terminal:</p>
+            <pre>sh -c "$(curl -fsSL https://raw.githubusercontent.com/mantis-stack/mantis-ui/master/install.sh)"</pre>
+            <p>Otherwise you can install <em>"manually"</em> doing the following steps:</p>
+            <ul>
+              <li>
+                <p>Clone the repo: <code>git clone git@github.com:mantis-stack/mantis-ui.git project-name</code></p>
+              </li>
+              <li>
+                <p>Enter the folder: <code>cd project-name</code></p>
+              </li>
+              <li>
+                <p>Install Node dependencies: <code>npm install</code></p>
+              </li>
+              <li>
+                <p>Finally install Bower components: <code>bower install</code></p>
+              </li>
+            </ul>
+            <p>But I recommend you to install the easiest way.</p>
+            <h3 id="gulp-commands">Gulp commands</h3>
+            <dl>
+              <dt>Default: <code>gulp</code></dt>
+              <dd>Run gulp to compile and watch files running on <a href="http://localhost:3000">localhost:3000</a></dd>
+            </dl>
+            <dl>
+              <dt>Build: <code>gulp build</code></dt>
+              <dd>Run gulp build to compile the files</dd>
+            </dl>
+            <dl>
+              <dt>Dist: <code>gulp dist</code></dt>
+              <dd>Run gulp dist to compile, optimize and minify files</dd>
+            </dl>
+            <dl>
+              <dt>Clean: <code>gulp clean</code></dt>
+              <dd>Run gulp clean to delete the build/ folder (same as <code>rm -rf public</code>)</dd>
+            </dl>
+          </article>
+          <hr>
+          <article class="layout__article" id="structure">
+            <h2>Structure</h2>
+            <p>Once the installation is finished, the structure will look like this:</p>
+            <pre>node_modules/
+src/
+├── dependencies/
+├── copy/
+│   ├── fonts/
+│   │   └── *.{eot|svg|ttf|woff}
+│   ├── **/*
+├── css/
+│   ├── components/
+│   │   └── *.styl
+│   ├── core/
+│   │   └── *.styl
+│   └── style.styl
+├── fonts/
+│   └── *.{eot|svg|ttf|woff}
+├── html/
+│   ├── incs/
+│   │   └── *.pug
+│   ├── layouts/
+│   │   └── *.pug
+│   └── index.pug
+├── img/
+│   ├── backgrounds/
+│   │   └── *.{jpg|png|svg}
+│   ├── favicons/
+│   │   └── *.{png|svg}
+│   ├── sprite/
+│   │   └── *.svg
+│   └── *.{jpg|png|svg}
+└── js/
+    ├── app/
+    │   ├── index.js
+    │   └── *.js
+    ├── modules/
+    │   └── *.js
+    └── app.js
+.babelrc
+.bowerrc
+.editorconfig
+.eslintrc
+.gitattributes
+.gitignore
+bower.json
+content.json
+gulpfile.babel.js
+gulpfile.paths.js
+logo.png
+logo.svg
+package.json
+README.md
+</pre>
+          </article>
+          <hr>
+        </section>
+        <section class="layout__content ui grid__item-sm--12" id="typography">
+          <h1>Typography</h1>
+          <article class="layout__article" id="headings">
+            <h2>Headings</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Heading</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.ui h1</code> or <code>.h1</code></td>
+                  <td>
+                    <h1>Heading 1</h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>.ui h2</code> or <code>.h2</code></td>
+                  <td>
+                    <h2>Heading 2</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>.ui h3</code> or <code>.h3</code></td>
+                  <td>
+                    <h3>Heading 3</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>.ui h4</code> or <code>.h4</code></td>
+                  <td>
+                    <h4>Heading 4</h4>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>.ui h5</code> or <code>.h5</code></td>
+                  <td>
+                    <h5>Heading 5</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>.ui h6</code> or <code>.h6</code></td>
+                  <td>
+                    <h6>Heading 6</h6>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <hr>
+          <article class="layout__article" id="inline-text-elements">
+            <h2>Inline Text Elements</h2>
+            <p>Styling elements for common inline HTML5 elements.</p><br>
+            <p>You can use the mark tag to 
+              <mark>highlight</mark> text.
+            </p>
+            <p><code>ui. mark</code> or <code>.mark</code></p><br>
+            <p>
+              <del>This line of text is meant to be treated as deleted text.</del>
+            </p>
+            <p><code>ui. del</code> or <code>.del</code></p><br>
+            <p>
+              <s>This line of text is meant to be treated as no longer accurate.</s>
+            </p>
+            <p><code>ui. s</code> or <code>.s</code></p><br>
+            <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+            <p><code>ui. ins</code> or <code>.ins</code></p><br>
+            <p>
+              <u>This line of text will render as underlined</u>
+            </p>
+            <p><code>ui. u</code> or <code>.u</code></p><br>
+            <p><small>This line of text is meant to be treated as fine print.</small></p>
+            <p><code>ui. small</code> or <code>.small</code></p><br>
+            <p><strong>This line rendered as bold text.</strong></p>
+            <p><code>ui. strong</code> or <code>.strong</code></p><br>
+            <p><em>This line rendered as italicized text.</em></p>
+            <p><code>ui. em</code> or <code>.em</code></p><br>
+            <p>Lorem ipsum dolor sit amet, <abbr title="Hyper Text Markup Language">HTML</abbr> adipisicing elit.</p>
+            <p><code>ui. abbr</code> or <code>.abbr</code></p><br>
+            <p>Output: <samp>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</samp></p>
+            <p><code>ui. samp</code> or <code>.samp</code></p><br>
+            <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+            <p><code>ui. code</code> or <code>.code</code></p><br>
+            <p>To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd></p>
+            <p><code>ui. kbd</code> or <code>.kbd</code></p>
+          </article>
+          <hr>
+          <article class="layout__article" id="block-text-elements">
+            <h2>Block Text Elements</h2>
+            <h3 id="paragraphs">Paragraphs</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex tenetur consequatur culpa provident aut beatae quibusdam quasi, quas explicabo, quae nam et incidunt neque optio enim ut distinctio temporibus accusantium?</p>
+            <pre>p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex tenetur consequatur culpa provident aut beatae quibusdam quasi, quas explicabo, quae nam et incidunt neque optio enim ut distinctio temporibus accusantium?</pre><br>
+            <h3 id="blockquotes">Blockquotes</h3>
+            <p>For quoting blocks of content from another source within your document. Use <code>.ui blockquote</code> or <code>.blockquote</code> to make a quoting.</p><br>
+            <blockquote>
+              <p class="blockquote__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <footer class="blockquote__footer">Someone famous like 
+                <cite class="blockquote__cite" title="Acauã Montiel">Acauã Montiel</cite>
+              </footer>
+            </blockquote>
+            <pre>blockquote
+    p.blockquote__quote Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    footer.blockquote__footer Someone famous like #[cite.blockquote__cite(title='Acauã Montiel') Acauã Montiel]
+</pre><br>
+            <h3 id="code">Code</h3>
+            <p>For coding blocks. Use <code>.ui pre</code> or <code>.pre</code>.</p><br>
+            <pre>import init from '../modules/init';
+
+export default class App {
+    constructor() {
+        this.id = Date.now();
+    }
+
+    init(callback) {
+        init.call(this, callback);
+    }
+}
+</pre>
+            <pre>pre.
+    import init from '../modules/init';
+
+    export default class App {
+        constructor() {
+            this.id = Date.now();
+        }
+
+        init(callback) {
+            init.call(this, callback);
+        }
+    }
+</pre>
+          </article>
+          <hr>
+          <article class="layout__article" id="text-utilities">
+            <h2>Text Utilities</h2>
+            <h3 id="text-themes">Themes</h3>
+            <p class="text--muted"><code>.text--muted</code> Muted - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text--alert"><code>.text--alert</code> Alert - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text--warning"><code>.text--warning</code> Warning - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text--info"><code>.text--info</code> Info - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text--success"><code>.text--success</code> Success - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text--primary"><code>.text--primary</code> Primary - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text--secondary"><code>.text--secondary</code> Secondary - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><br>
+            <h3 id="text-misc">Miscelaneous</h3>
+            <p class="text--left">Text left</p>
+            <p><code>.text--left</code></p><br>
+            <p class="text--center">Text center</p>
+            <p><code>.text--center</code></p><br>
+            <p class="text--right">Text right</p>
+            <p><code>.text--right</code></p><br>
+            <p class="text--justify">Text justify - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laborum aspernatur quibusdam sed incidunt vitae eum id tempore recusandae magni atque, cupiditate fugiat magnam nostrum sint natus enim corporis quam.</p>
+            <p><code>.text--justify</code></p><br>
+            <p class="text--nowrap">Text nowrap - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laborum aspernatur quibusdam sed incidunt vitae eum id tempore recusandae magni atque, cupiditate fugiat magnam nostrum sint natus enim corporis quam.</p>
+            <p><code>.text--nowrap</code></p><br>
+            <p class="text--break">Text break - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laborum aspernatur quibusdam sed incidunt vitae eum id tempore recusandae magni atque, cupiditate fugiat magnam nostrum sint natus enim corporis quam.</p>
+            <p><code>.text--break</code></p><br>
+            <p class="text--ellipsis">Text ellipsis - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laborum aspernatur quibusdam sed incidunt vitae eum id tempore recusandae magni atque, cupiditate fugiat magnam nostrum sint natus enim corporis quam.</p>
+            <p><code>.text--ellipsis</code></p><br>
+            <p class="text--uppercase">Text uppercase</p>
+            <p><code>.text--uppercase</code></p>
+            <p class="text--lowercase">Text lowercase</p>
+            <p><code>.text--lowercase</code></p><br>
+            <p class="text--capitalize">Text capitalize</p>
+            <p><code>.text--capitalize</code></p>
+          </article>
+          <hr>
+        </section>
+        <section class="layout__content ui grid__item-sm--12" id="lists">
+          <h1>Lists</h1>
+          <article class="layout__article" id="list-unordered">
+            <h2>Unordered</h2>
+            <p>Use <code>.ui ul</code> or <code>.ul</code> to make unordered lists</p><br>
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies
+                    <ul>
+                      <li>Phasellus iaculis neque</li>
+                      <li>Ac tristique libero volutpat at</li>
+                    </ul>
+                  </li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ul>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ul>
+            <pre>ul
+    li Lorem ipsum dolor sit amet
+    li Consectetur adipiscing elit
+    li Integer molestie lorem at massa
+    li Facilisis in pretium nisl aliquet
+    li Nulla volutpat aliquam velit
+        ul
+            li Phasellus iaculis neque
+            li Purus sodales ultricies
+                ul
+                    li Phasellus iaculis neque
+                    li Ac tristique libero volutpat at
+            li Vestibulum laoreet porttitor sem
+            li Ac tristique libero volutpat at
+    li Faucibus porta lacus fringilla vel
+    li Aenean sit amet erat nunc
+    li Eget porttitor lorem
+</pre>
+          </article>
+          <article class="layout__article" id="list-ordered">
+            <h2>Ordered</h2>
+            <p>Use <code>.ui ol</code> or <code>.ol</code> to make ordered lists</p><br>
+            <ol>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ol>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ol>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ol>
+            <pre>ol
+    li Lorem ipsum dolor sit amet
+    li Consectetur adipiscing elit
+    li Integer molestie lorem at massa
+    li Facilisis in pretium nisl aliquet
+    li Nulla volutpat aliquam velit
+        ol
+            li Phasellus iaculis neque
+            li Purus sodales ultricies
+            li Vestibulum laoreet porttitor sem
+            li Ac tristique libero volutpat at
+    li Faucibus porta lacus fringilla vel
+    li Aenean sit amet erat nunc
+    li Eget porttitor lorem
+</pre>
+          </article>
+          <article class="layout__article" id="description-list">
+            <h2>Description List</h2>
+            <p>Use <code>.ui dl</code> or <code>.dl</code> to make description lists</p><br>
+            <dl>
+              <dt>Description lists</dt>
+              <dd>A description list defines terms and their corresponding descriptions.</dd>
+              <dt>This is a term</dt>
+              <dd>This is a description.</dd>
+              <dt>This is a term</dt>
+              <dd>This is a description.</dd>
+            </dl>
+            <pre>dl
+    dt Description lists
+    dd A description list defines terms and their corresponding descriptions.
+    dt This is a term
+    dd This is a description.
+    dt This is a term
+    dd This is a description.
+</pre>
+          </article>
+          <hr class="hr">
+        </section>
+      </div>
+    </main>
+    <script src="dependencies/zepto/zepto.min.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
