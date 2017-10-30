@@ -52,11 +52,11 @@
   </head>
   <link rel="stylesheet" type="text/css" href="css/docs.css">
   <body>
-    <nav class="navbar navbar--expand-lg">
-      <div class="navbar__brand"><a href="/" title="Mantis UI"><img class="icon" src="./img/logo.svg">Mantis UI</a></div>
+    <nav class="navbar navbar--dark navbar--expand-lg">
+      <div class="navbar__brand"><a href="./" title="Mantis UI"><img class="icon" src="./img/logo.svg">Mantis UI</a></div>
       <div class="navbar__collapse">
         <ul class="navbar__nav">
-          <li class="navbar__nav__item"><a class="navbar__link" href="/" title="Home">Home</a></li>
+          <li class="navbar__nav__item"><a class="navbar__link" href="./" title="Home">Home</a></li>
           <li class="navbar__nav__item dropdown">
             <button class="navbar__link dropdown__toggle navbar__link--active" title="Documentation">Documentation</button>
             <div class="dropdown__list dropdown__list--bottom-left">
@@ -64,7 +64,7 @@
                 <svg class="icon icon--close">
                   <use xlink:href="./img/sprite.svg#close"></use>
                 </svg>
-              </button><a class="dropdown__item" href="documentation.html#get-started">Get started</a><a class="dropdown__item" href="documentation.html#typography">Typography</a><a class="dropdown__item" href="documentation.html#lists">Lists</a>
+              </button><a class="dropdown__item" href="./documentation.html#get-started">Get started</a><a class="dropdown__item" href="./documentation.html#typography">Typography</a><a class="dropdown__item" href="./documentation.html#lists">Lists</a>
             </div>
           </li>
           <li class="navbar__nav__item"><a class="navbar__link navbar__link--disabled" title="Soon">Examples</a></li>
@@ -84,22 +84,22 @@
       <aside class="layout__sidebar">
         <dl>
           <dt>Get Started</dt>
-          <dd><a href="documentation.html#introduction">Introduction</a></dd>
-          <dd><a href="documentation.html#usage">Usage</a></dd>
-          <dd><a href="documentation.html#structure">Structure</a></dd>
+          <dd><a href="./documentation.html#introduction">Introduction</a></dd>
+          <dd><a href="./documentation.html#usage">Usage</a></dd>
+          <dd><a href="./documentation.html#structure">Structure</a></dd>
         </dl>
         <dl>
           <dt>Typography</dt>
-          <dd><a href="documentation.html#headings">Headings</a></dd>
-          <dd><a href="documentation.html#inline-text-elements">Inline Text Elements</a></dd>
-          <dd><a href="documentation.html#block-text-elements">Block Text Elements</a></dd>
-          <dd><a href="documentation.html#text-utilities">Text Utilities</a></dd>
+          <dd><a href="./documentation.html#headings">Headings</a></dd>
+          <dd><a href="./documentation.html#inline-text-elements">Inline Text Elements</a></dd>
+          <dd><a href="./documentation.html#block-text-elements">Block Text Elements</a></dd>
+          <dd><a href="./documentation.html#text-utilities">Text Utilities</a></dd>
         </dl>
         <dl>
           <dt>Lists</dt>
-          <dd><a href="documentation.html#list-unordered">Unordered</a></dd>
-          <dd><a href="documentation.html#list-ordered">Ordered</a></dd>
-          <dd><a href="documentation.html#definition-list">Definition List</a></dd>
+          <dd><a href="./documentation.html#list-unordered">Unordered</a></dd>
+          <dd><a href="./documentation.html#list-ordered">Ordered</a></dd>
+          <dd><a href="./documentation.html#definition-list">Definition List</a></dd>
         </dl>
       </aside>
       <div class="layout__scrollable grid__item-sm grid grid--justify-center">
@@ -421,6 +421,7 @@ export default class App {
     li Eget porttitor lorem
 </pre>
           </article>
+          <hr>
           <article class="layout__article" id="list-ordered">
             <h2>Ordered</h2>
             <p>Use <code>.ui ol</code> or <code>.ol</code> to make ordered lists</p><br>
@@ -457,6 +458,7 @@ export default class App {
     li Eget porttitor lorem
 </pre>
           </article>
+          <hr>
           <article class="layout__article" id="definition-list">
             <h2>Definition List</h2>
             <p>Use <code>.ui dl</code> or <code>.dl</code> to make definition lists</p><br>
@@ -477,7 +479,7 @@ export default class App {
     dd This is a description.
 </pre>
           </article>
-          <hr class="hr">
+          <hr>
         </section>
       </div>
     </main>
