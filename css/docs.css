@@ -1808,30 +1808,29 @@ td.text--ellipsis {
 /* line 1 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
 .layout {
   width: 100vw;
-  min-height: 100vh;
 }
 
-/* line 5 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
+/* line 4 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
 .layout__sidebar,
 .layout__scrollable {
   overflow: auto;
   height: 100vh;
 }
 
-/* line 10 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
+/* line 9 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
 .layout__sidebar {
   display: none;
 }
 @media only screen and (min-width: 960px) {
 
-/* line 13 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
+/* line 12 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
   .layout__sidebar {
     display: block;
     padding: 10px 20px;
   }
 }
 
-/* line 17 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
+/* line 16 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
 .layout__content {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -1842,12 +1841,12 @@ td.text--ellipsis {
   flex-grow: 1;
 }
 
-/* line 20 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
+/* line 19 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
 .layout__footer {
   margin-top: 20px;
 }
 
-/* line 23 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
+/* line 22 : /Users/acauamontiel/www/acaua/mantis/mantis-ui/src/css/docs/layout.styl */
 .layout__footer iframe {
   margin: 5px 10px;
 }
