@@ -1,9 +1,11 @@
 .layout
 	width 100vw
+	height 100vh
 
 	&__sidebar
 	&__scrollable
-		overflow auto
+		overflow hidden
+		overflow-y auto
 		height 100vh
 
 	&__sidebar
@@ -11,7 +13,8 @@
 
 		@media $from.lg
 			display block
-			padding 10px 20px
+			padding 10px 50px
+			border-right 1px solid $hr-border-color
 
 	&__content
 		flex-grow 1

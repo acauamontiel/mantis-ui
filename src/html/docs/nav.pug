@@ -1,21 +1,21 @@
-nav.navbar.navbar--expand-lg(class={'navbar--sticky': page.section === 'home'})
+nav.navbar.navbar--dark.navbar--expand-lg(class={'navbar--sticky': page.section === 'home'})
 	.navbar__brand
-		a(href='/', title='Mantis UI')
+		a(href='./', title='Mantis UI')
 			img.icon(src='./img/logo.svg')
 			| Mantis UI
 
 	.navbar__collapse
 		ul.navbar__nav
 			li.navbar__nav__item
-				a.navbar__link(href='/', title='Home', class={'navbar__link--active': page.section === 'home'}) Home
+				a.navbar__link(href='./', title='Home', class={'navbar__link--active': page.section === 'home'}) Home
 			li.navbar__nav__item.dropdown
 				button.navbar__link.dropdown__toggle(title='Documentation', class={'navbar__link--active': page.section === 'docs'}) Documentation
 				.dropdown__list.dropdown__list--bottom-left
 					button.dropdown__close
 						+icon('close')
-					a.dropdown__item(href='documentation.html#get-started') Get started
-					a.dropdown__item(href='documentation.html#typography') Typography
-					a.dropdown__item(href='documentation.html#lists') Lists
+					a.dropdown__item(href='./documentation.html#get-started') Get started
+					a.dropdown__item(href='./documentation.html#typography') Typography
+					a.dropdown__item(href='./documentation.html#lists') Lists
 			li.navbar__nav__item
 				a.navbar__link.navbar__link--disabled(title='Soon', class={'navbar__link--active': page.section === 'examples'}) Examples
 			li.navbar__nav__item

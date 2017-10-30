@@ -7,6 +7,9 @@ $navbar-color = $themes.primary.normal
 $navbar-background = $color.white
 $navbar-border-radius = $mantis.ui.radius.default
 
+$navbar-dark-color = $color.white
+$navbar-dark-background = $themes.primary.highlight
+
 $navbar-brand-margin = 18px
 $navbar-brand-font-size = $font-size-xlarge
 $navbar-brand-icon-margin = 8px
@@ -85,6 +88,10 @@ navbar-expand()
 			&-{$bp}
 				@media $from[$bp]
 					navbar-expand()
+
+	&--dark
+		color $navbar-dark-color
+		background $navbar-dark-background
 
 	&__brand
 		@extends .type-brand
