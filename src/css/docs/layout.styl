@@ -2,6 +2,18 @@
 	width 100vw
 	min-height 100vh
 
+	&__sidebar
+	&__scrollable
+		overflow auto
+		height 100vh
+
+	&__sidebar
+		display none
+
+		@media $from.lg
+			display block
+			padding 10px 20px
+
 	&__content
 		flex-grow 1
 
