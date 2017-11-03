@@ -65,7 +65,7 @@
                   <svg class="icon icon--close">
                     <use xlink:href="./img/sprite.svg#close"></use>
                   </svg>
-                </button><a class="dropdown__item" href="./documentation.html#get-started">Get started</a><a class="dropdown__item" href="./documentation.html#typography">Typography</a><a class="dropdown__item" href="./documentation.html#lists">Lists</a>
+                </button><a class="dropdown__item" href="./documentation.html#get-started">Get started</a><a class="dropdown__item" href="./documentation.html#typography">Typography</a><a class="dropdown__item" href="./documentation.html#lists">Lists</a><a class="dropdown__item" href="./documentation.html#buttons">Buttons</a>
               </div>
             </li>
             <li class="navbar__nav__item"><a class="navbar__link navbar__link--disabled" title="Soon">Examples</a></li>
@@ -461,6 +461,200 @@ export default class App {
             </article>
             <hr>
           </section>
+          <section class="grid__item-sm--12" id="buttons">
+            <h1>Buttons</h1>
+            <p><em>Mantis UI</em> includes several predefined button styles, themes, sizes and states. You just need to add <code>.bt</code> class in a <code>button</code>, <code>a</code> or <code>input(type="button|submit|reset")</code> and choose which modifier best fits your needs.</p><br>
+            <article class="layout__article" id="button-themes">
+              <h2>Themes</h2>
+              <p>
+                <button class="bt">Default</button>
+                <button class="bt bt--alert">Alert</button>
+                <button class="bt bt--warning">Warning</button>
+                <button class="bt bt--info">Info</button>
+                <button class="bt bt--success">Success</button>
+                <button class="bt bt--primary">Primary</button>
+                <button class="bt bt--secondary">Secondary</button>
+              </p>
+              <pre>button.bt Default
+button.bt.bt--alert Alert
+button.bt.bt--warning Warning
+button.bt.bt--info Info
+button.bt.bt--success Success
+button.bt.bt--primary Primary
+button.bt.bt--secondary Secondary
+</pre>
+            </article>
+            <hr>
+            <article class="layout__article" id="button-styles">
+              <h2>Styles</h2>
+              <p>
+                <button class="bt">Default</button>
+                <button class="bt bt--fussy">Fussy</button>
+                <button class="bt bt--quiet">Quiet</button>
+              </p>
+              <p>
+                <button class="bt bt--alert">Default</button>
+                <button class="bt bt--alert bt--fussy">Fussy</button>
+                <button class="bt bt--alert bt--quiet">Quiet</button>
+              </p>
+              <p>
+                <button class="bt bt--warning">Default</button>
+                <button class="bt bt--warning bt--fussy">Fussy</button>
+                <button class="bt bt--warning bt--quiet">Quiet</button>
+              </p>
+              <p>
+                <button class="bt bt--info">Default</button>
+                <button class="bt bt--info bt--fussy">Fussy</button>
+                <button class="bt bt--info bt--quiet">Quiet</button>
+              </p>
+              <p>
+                <button class="bt bt--success">Default</button>
+                <button class="bt bt--success bt--fussy">Fussy</button>
+                <button class="bt bt--success bt--quiet">Quiet</button>
+              </p>
+              <p>
+                <button class="bt bt--primary">Default</button>
+                <button class="bt bt--primary bt--fussy">Fussy</button>
+                <button class="bt bt--primary bt--quiet">Quiet</button>
+              </p>
+              <p>
+                <button class="bt bt--secondary">Default</button>
+                <button class="bt bt--secondary bt--fussy">Fussy</button>
+                <button class="bt bt--secondary bt--quiet">Quiet</button>
+              </p>
+              <pre>button.bt Default
+button.bt.bt--fussy Fussy
+button.bt.bt--quiet Quiet
+</pre>
+            </article>
+            <hr>
+            <article class="layout__article" id="button-sizes">
+              <h2>Sizes</h2>
+              <p>
+                <button class="bt bt--small">Small</button>
+                <button class="bt">Default</button>
+                <button class="bt bt--large">Large</button>
+                <button class="bt bt--giant">Giant</button>
+              </p>
+              <pre>button.bt.bt--small Small
+button.bt Default
+button.bt.bt--large Large
+button.bt.bt--giant Giant</pre><br>
+              <p>
+                <button class="bt bt--block bt--small">Block Small</button>
+                <button class="bt bt--block">Block Default</button>
+                <button class="bt bt--block bt--large">Block Large</button>
+                <button class="bt bt--block bt--giant">Block Giant</button>
+              </p>
+              <pre>button.bt.bt--block.bt--small Block Small
+button.bt.bt--block Block Default
+button.bt.bt--block.bt--large Block Large
+button.bt.bt--block.bt--giant Block Giant
+</pre>
+            </article>
+            <hr>
+            <article class="layout__article" id="button-states">
+              <h2>States</h2>
+              <p>
+                <button class="bt">Default</button>
+                <button class="bt bt--active">Active</button>
+                <button class="bt" disabled>Disabled</button>
+              </p>
+              <pre>button.bt Default
+button.bt.bt--active Active
+button.bt(disabled) Disabled
+</pre>
+            </article>
+            <hr>
+            <article class="layout__article" id="button-group">
+              <h2>Button Group</h2>
+              <p>You can make button groups by wrapping the buttons using the <code>.bt-group</code> class.</p><br>
+              <p class="bt-group">
+                <button class="bt">Button 1</button>
+                <button class="bt">Button 2</button>
+                <button class="bt">Button 3</button>
+              </p>
+              <pre>.bt-group
+    button.bt Button 1
+    button.bt Button 2
+    button.bt Button 3</pre><br>
+              <p class="bt-group-vertical">
+                <button class="bt">Button</button>
+                <button class="bt">Button</button>
+                <button class="bt">Button with more content</button>
+                <button class="bt">Button</button>
+              </p>
+              <pre>.bt-group-vertical
+    button.bt Button
+    button.bt Button
+    button.bt Button with more content
+    button.bt Button</pre><br>
+              <p class="bt-group bt-group--giant">
+                <button class="bt">Button</button>
+                <button class="bt">Button</button>
+              </p>
+              <p class="bt-group bt-group--large">
+                <button class="bt">Button</button>
+                <button class="bt">Button</button>
+              </p>
+              <p class="bt-group">
+                <button class="bt">Button</button>
+                <button class="bt">Button</button>
+              </p>
+              <p class="bt-group bt-group--small">
+                <button class="bt">Button</button>
+                <button class="bt">Button</button>
+              </p>
+              <pre>.bt-group.bt-group--giant
+	button.bt Button
+	button.bt Button
+
+.bt-group.bt-group--large
+	button.bt Button
+	button.bt Button
+
+.bt-group
+	button.bt Button
+	button.bt Button
+
+.bt-group.bt-group--small
+	button.bt Button
+	button.bt Button</pre><br>
+              <p class="bt-group-vertical bt-group--giant">
+                <button class="bt">Button</button>
+                <button class="bt">Button</button>
+              </p>
+              <p class="bt-group-vertical bt-group--large">
+                <button class="bt bt--fussy">Button</button>
+                <button class="bt bt--fussy">Button</button>
+              </p>
+              <p class="bt-group-vertical">
+                <button class="bt bt--quiet">Button</button>
+                <button class="bt bt--quiet">Button</button>
+              </p>
+              <p class="bt-group-vertical bt-group--small">
+                <button class="bt">Button</button>
+                <button class="bt">Button</button>
+              </p>
+              <pre>.bt-group-vertical.bt-group--giant
+	button.bt Button
+	button.bt Button
+
+.bt-group-vertical.bt-group--large
+	button.bt.bt--fussy Button
+	button.bt.bt--fussy Button
+
+.bt-group-vertical
+	button.bt.bt--quiet Button
+	button.bt.bt--quiet Button
+
+.bt-group-vertical.bt-group--small
+	button.bt Button
+	button.bt Button
+</pre>
+            </article>
+            <hr>
+          </section>
         </div>
       </main>
       <aside class="layout__sidebar ui">
@@ -482,6 +676,14 @@ export default class App {
           <dd><a href="./documentation.html#list-unordered">Unordered</a></dd>
           <dd><a href="./documentation.html#list-ordered">Ordered</a></dd>
           <dd><a href="./documentation.html#definition-list">Definition List</a></dd>
+        </dl>
+        <dl>
+          <dt>Buttons</dt>
+          <dd><a href="./documentation.html#button-themes">Themes</a></dd>
+          <dd><a href="./documentation.html#button-styles">Styles</a></dd>
+          <dd><a href="./documentation.html#button-sizes">Sizes</a></dd>
+          <dd><a href="./documentation.html#button-states">States</a></dd>
+          <dd><a href="./documentation.html#button-group">Button Group</a></dd>
         </dl>
       </aside>
     </div>
