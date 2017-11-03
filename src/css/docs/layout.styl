@@ -1,15 +1,22 @@
 .layout
-	width 100vw
-	height 100vh
+	display grid
+	grid-template-columns auto
+	grid-template-rows 60px auto
+	grid-template-areas 'nav' 'content'
 
-	&__sidebar
-	&__scrollable
-		overflow hidden
-		overflow-y auto
+	@media $from.lg
+		grid-template-columns 300px auto
+		grid-template-areas 'nav nav' 'sidebar content'
 		height 100vh
 
 	&__sidebar
+	&__content
+		overflow hidden
+		overflow-y auto
+
+	&__sidebar
 		display none
+		grid-area sidebar
 
 		@media $from.lg
 			display block
@@ -17,10 +24,14 @@
 			border-right 1px solid $hr-border-color
 
 	&__content
-		flex-grow 1
+		grid-area content
 
 	&__footer
-		margin-top 20px
+		grid-area footer
+		padding-top 20px
 
 		iframe
 			margin 5px 10px
+
+	.navbar
+		grid-area nav

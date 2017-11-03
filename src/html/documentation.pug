@@ -3,14 +3,13 @@ extends layouts/docs
 block content
 	- var page = {section: 'docs'};
 
-	include docs/nav
+	#docs-documentation.layout
+		include docs/nav
 
-	main#docs-documentation.layout.grid.ui
+		main.layout__content.ui
+			.grid__item-sm.grid.grid--justify-center
+				include docs/sections/get-started
+				include docs/sections/typography
+				include docs/sections/lists
+
 		include docs/sidebar
-
-		.layout__scrollable.grid__item-sm.grid.grid--justify-center
-			include docs/sections/get-started
-			include docs/sections/typography
-			include docs/sections/lists
-
-		//- include docs/footer

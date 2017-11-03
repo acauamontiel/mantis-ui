@@ -3,10 +3,10 @@ extends layouts/docs
 block content
 	- var page = {section: 'home'};
 
-	include docs/nav
+	#docs-home
+		include docs/nav
 
-	main#docs-home.layout.grid.grid--column
-		section.layout__content.grid.grid--align-center.grid--justify-center.text--center
+		main.layout__content.grid.grid--align-center.grid--justify-center.text--center
 			img#docs-home__logo(src='./img/logo.svg')
 			h1#docs-home__title The fastest and most up-to-date modular front-end framework
 
@@ -15,4 +15,3 @@ block content
 				a.bt.bt--large.bt--fussy(href='https://github.com/mantis-stack/mantis-ui', title='GitHub', target='_blank') #[+icon('github')] GitHub
 
 		include docs/footer
-
