@@ -32,6 +32,9 @@ $navbar-link-disabled-opacity = .5
 
 
 navbar-expand()
+	&.navbar
+		border-radius $navbar-border-radius
+
 	& .navbar
 		&__menu
 			display none
@@ -75,7 +78,6 @@ navbar-expand()
 	padding $navbar-padding
 	color $navbar-color
 	background $navbar-background
-	border-radius $navbar-border-radius
 	z-index navbar
 
 	&--sticky
@@ -92,6 +94,9 @@ navbar-expand()
 	&--dark
 		color $navbar-dark-color
 		background $navbar-dark-background
+
+		& ^[0]__collapse
+			background $navbar-dark-background
 
 	&__brand
 		@extends .type-brand
